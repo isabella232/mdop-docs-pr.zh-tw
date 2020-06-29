@@ -1,0 +1,56 @@
+---
+title: 維護 MBAM 2.5
+description: 維護 MBAM 2.5
+author: dansimp
+ms.assetid: 44d398a0-2ca0-4d47-943c-322345409b59
+ms.reviewer: ''
+manager: dansimp
+ms.author: dansimp
+ms.pagetype: mdop, security
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.prod: w10
+ms.date: 06/16/2016
+ms.openlocfilehash: 9f9e4b170979bbdc03ebb2838ae8258bdadc917c
+ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "10809926"
+---
+# <span data-ttu-id="ed8ef-103">維護 MBAM 2.5</span><span class="sxs-lookup"><span data-stu-id="ed8ef-103">Maintaining MBAM 2.5</span></span>
+
+
+<span data-ttu-id="ed8ef-104">本節中的主題描述您可以使用 Microsoft BitLocker 管理和監控（MBAM）2.5 執行的維護工作。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-104">The topics in this section describe maintenance tasks that you can perform with Microsoft BitLocker Administration and Monitoring (MBAM) 2.5.</span></span>
+
+## <span data-ttu-id="ed8ef-105">將 MBAM 2.5 功能移至另一個伺服器</span><span class="sxs-lookup"><span data-stu-id="ed8ef-105">Moving MBAM 2.5 features to another server</span></span>
+
+
+<span data-ttu-id="ed8ef-106">使用本主題中的步驟，將 MBAM 伺服器功能從一台伺服器電腦移到另一個伺服器電腦。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-106">Use the steps in this topic to move an MBAM Server feature from one server computer to another.</span></span>
+
+[<span data-ttu-id="ed8ef-107">將 MBAM 2.5 功能移到其他伺服器</span><span class="sxs-lookup"><span data-stu-id="ed8ef-107">Moving MBAM 2.5 Features to Another Server</span></span>](moving-mbam-25-features-to-another-server.md)
+
+## <span data-ttu-id="ed8ef-108">監視 web 服務要求效能計數器</span><span class="sxs-lookup"><span data-stu-id="ed8ef-108">Monitoring web service request performance counters</span></span>
+
+
+<span data-ttu-id="ed8ef-109">請依照本主題中的步驟，監視針對管理和監控網站和自助服務入口網站傳送至 web 服務之要求效能的效能計數器。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-109">Use the steps in this topic to monitor the performance counters that record the performance of requests that are sent to the web services for the Administration and Monitoring Website and the Self-Service Portal.</span></span>
+
+[<span data-ttu-id="ed8ef-110">監視 Web 服務要求效能計數器</span><span class="sxs-lookup"><span data-stu-id="ed8ef-110">Monitoring Web Service Request Performance Counters</span></span>](monitoring-web-service-request-performance-counters.md)
+
+## <span data-ttu-id="ed8ef-111">維護 MBAM 的其他資源</span><span class="sxs-lookup"><span data-stu-id="ed8ef-111">Other resources for maintaining MBAM</span></span>
+
+
+[<span data-ttu-id="ed8ef-112">適用於 MBAM 2.5 的操作</span><span class="sxs-lookup"><span data-stu-id="ed8ef-112">Operations for MBAM 2.5</span></span>](operations-for-mbam-25.md)
+
+## <span data-ttu-id="ed8ef-113">取得 MBAM 的建議嗎？</span><span class="sxs-lookup"><span data-stu-id="ed8ef-113">Got a suggestion for MBAM?</span></span>
+- <span data-ttu-id="ed8ef-114">在[此](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)新增或投票建議。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-114">Add or vote on suggestions [here](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring).</span></span> 
+- <span data-ttu-id="ed8ef-115">如需 MBAM 問題，請使用[MBAM TechNet 論壇](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-115">For MBAM issues, use the [MBAM TechNet Forum](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam).</span></span>
+
+ 
+
+ 
+
+
+
+
+
