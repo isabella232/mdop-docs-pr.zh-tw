@@ -72,7 +72,7 @@ ms.locfileid: "10802757"
 <thead>
 <tr class="header">
 <th align="left">GPO 特性</th>
-<th align="left">描述</th>
+<th align="left">說明</th>
 </tr>
 </thead>
 <tbody>
