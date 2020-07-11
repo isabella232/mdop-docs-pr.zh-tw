@@ -23,7 +23,7 @@ ms.locfileid: "10809297"
 
 **若要搜尋這些版本筆記，請按 CTRL + F。**
 
-在安裝 Microsoft Application Virtualization （App-v） 4.6 SP2 之前，請先閱讀這些版本資訊。
+請先閱讀這些版本資訊，然後再安裝 Microsoft Application Virtualization (App-v) 4.6 SP2。
 
 這些版本資訊包含成功安裝應用程式虛擬化 4.6 SP2 所需的資訊。 版本資訊中也包含產品檔中不提供的資訊。 如果這些版本資訊與其他 App-v 4.6 SP2 檔之間有差異，最新變更應該視為權威性。 這些版本資訊取代本產品隨附的內容。
 
@@ -50,11 +50,11 @@ ms.locfileid: "10809297"
 
 ### 當您按順序時，系統會停用非系統物理磁片磁碟機的短檔案名支援
 
-當您在 Windows 8 或 Windows Server 2012 上順序時，短檔案名（8.3）的支援會預設為非系統物理磁片磁碟機停用。
+當您在 Windows 8 或 Windows Server 2012 上順序時，支援的短檔案名 (8.3) 預設為非系統物理磁片磁碟機停用。
 
-在先後順序站上，與主要虛擬應用程式目錄（例如，"Q:\\appname"）相關聯的基礎物理磁片磁碟機，必須提供短檔案名（8.3）支援，才能讓 App-V 4.6 SP2 排序器在建立虛擬應用程式套件時產生短檔案名。 預設會針對 Windows 8 或 Windows Server 2012 上的非系統物理磁片磁碟機停用短檔案名（8.3）支援。
+與主要虛擬應用程式目錄相關聯的基礎物理磁片磁碟機 (例如，排序站上的「Q:\\appname」 ) 必須提供短檔案名 (8.3) 支援，才能在建立虛擬應用程式套件時產生短檔案名。 短檔案名 (針對 Windows 8 或 Windows Server 2012 上的非系統物理磁片磁碟機，預設會停用 8.3) 支援。
 
-因應措施 **：** 啟用在非系統物理磁片磁碟機上的短檔案名（8.3）支援。 您可以使用下列命令，在 Windows 8 或 Windows Server 2012 上啟用短檔案名支援。
+因應措施 **：** 啟用短檔案名 (8.3) 在非系統物理磁片磁碟機上的支援。 您可以使用下列命令，在 Windows 8 或 Windows Server 2012 上啟用短檔案名支援。
 
 ``` syntax
 fsutil 8dot3name set <virtual drive letter>:
@@ -92,7 +92,7 @@ Mailto 命令介面擴展不會在 Windows 8 上提供虛擬化的 Outlook 2010�
 
 -   塞爾維亞文-西瑞爾文
 
-因應措施 **：** 如果您使用的是 Microsoft Windows Server Update Services （WSUS），請使用英文版的更新，或從 Microsoft 更新目錄下載更新。
+因應措施 **：** 如果您使用的是 Microsoft Windows Server Update Services (WSUS) ，請使用英文版的更新，或從 Microsoft 更新目錄下載更新。
 
 ## 版本資訊版權資訊
 

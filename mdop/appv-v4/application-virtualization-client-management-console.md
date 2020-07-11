@@ -21,7 +21,7 @@ ms.locfileid: "10809272"
 # Application Virtualization Client 管理主控台
 
 
-Microsoft Application Virtualization 用戶端管理主控台是 Microsoft 管理主控台的快照。 系統管理員和使用者可以使用應用程式虛擬化管理主控台來設定遠端桌面服務（舊稱終端服務）的桌面用戶端和用戶端，以及管理應用程式。
+Microsoft Application Virtualization 用戶端管理主控台是 Microsoft 管理主控台的快照。 系統管理員和使用者可以使用應用程式虛擬化管理主控台來設定遠端桌面服務的桌面用戶端和用戶端， (先前的終端服務) 與管理應用程式。
 
 ## 本節內容
 

@@ -21,7 +21,7 @@ ms.locfileid: "10809260"
 # Application Virtualization Client
 
 
-您可以使用本節中的程式來設定及管理 Microsoft Application Virtualization （App-v）用戶端。 提供的程式是透過使用 App-v 用戶端管理主控台與 App-v 用戶端進行手動互動，也可以使用命令列。
+您可以使用本節中的程式來設定及管理 Microsoft Application Virtualization (App-v) 用戶端。 提供的程式是透過使用 App-v 用戶端管理主控台與 App-v 用戶端進行手動互動，也可以使用命令列。
 
 ## 本節內容
 

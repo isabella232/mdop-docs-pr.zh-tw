@@ -21,7 +21,7 @@ ms.locfileid: "10809266"
 # Application Virtualization Client 參考資料
 
 
-本節提供的參考資訊與安裝及管理應用程式虛擬化（app-v）用戶端，以及由應用程式虛擬化（app-v）排序器所建立的虛擬應用程式套件相關。
+本節提供的參考資訊與安裝與管理應用程式虛擬化 (App-v) 用戶端，以及由應用程式虛擬化 (App-v) 排序器所建立的虛擬應用程式套件相關。
 
 ## 本節內容
 
@@ -33,7 +33,7 @@ ms.locfileid: "10809266"
 列出並描述所有 SFTTRAY 命令與命令列參數。
 
 <a href="" id="application-virtualization-client-wmi-provider"></a>[Application Virtualization Client WMI 提供者](application-virtualization-client-wmi-provider.md)  
-說明 App-V 用戶端 WMI 提供者中提供的 Windows Management Instrumentation （WMI）類別。
+說明應用程式-V 用戶端 WMI 提供程式中提供的 Windows 管理工具 (WMI) 類別。
 
 <a href="" id="log-file-for-the-application-virtualization-client"></a>[Application Virtualization Client 的記錄檔](log-file-for-the-application-virtualization-client.md)  
 提供 App-v 用戶端記錄檔的相關資訊。

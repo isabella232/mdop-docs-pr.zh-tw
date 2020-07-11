@@ -21,7 +21,7 @@ ms.locfileid: "10809255"
 # Application Virtualization 部署與升級考量
 
 
-開始部署 Microsoft 應用程式虛擬化（App-v）之前，您可能必須審查您的環境需求，包括安裝各種應用程式虛擬化元件的硬體和軟體需求。 此外，如果您是從舊版升級，本節中的主題會提供有關如何升級您目前的排序器、伺服器和用戶端版本的資訊。
+開始部署 Microsoft Application Virtualization (App-v) 之前，您可能必須審查您的環境需求，包括安裝各種應用程式虛擬化元件所需的硬體和軟體需求。 此外，如果您是從舊版升級，本節中的主題會提供有關如何升級您目前的排序器、伺服器和用戶端版本的資訊。
 
 ## 本節內容
 
@@ -33,7 +33,7 @@ ms.locfileid: "10809255"
 提供詳細的安裝與升級工作清單，其中包含特定程式的連結。
 
 <a href="" id="how-to-install-the-servers-and-system-components"></a>[如何安裝伺服器和系統元件](how-to-install-the-servers-and-system-components.md)  
-說明如何安裝以伺服器為基礎的部署所需的應用程式虛擬化（App-v）平臺元件。
+說明如何安裝應用程式虛擬化 (App-v) 平臺元件（針對伺服器的部署所需）。
 
 <a href="" id="how-to-manually-install-the-application-virtualization-client"></a>[如何手動安裝 Application Virtualization Client](how-to-manually-install-the-application-virtualization-client.md)  
 說明如何安裝應用程式虛擬化用戶端軟體。
@@ -42,7 +42,7 @@ ms.locfileid: "10809255"
 說明如何安裝應用程式虛擬化排序器。
 
 <a href="" id="how-to-upgrade-the-application-virtualization-client"></a>[如何升級 Application Virtualization Client](how-to-upgrade-the-application-virtualization-client.md)  
-說明如何升級應用程式虛擬化桌面用戶端或適用于遠端桌面服務的應用程式虛擬化用戶端（以前稱為 [終端服務]）。
+說明如何為遠端桌面服務升級應用程式虛擬化桌面用戶端或應用程式虛擬化用戶端， (先前的終端服務) 。
 
 <a href="" id="how-to-upgrade-the-servers-and-system-components"></a>[如何升級伺服器和系統元件](how-to-upgrade-the-servers-and-system-components.md)  
 說明如何升級安裝在所有應用程式虛擬化管理系統電腦上的軟體元件。
