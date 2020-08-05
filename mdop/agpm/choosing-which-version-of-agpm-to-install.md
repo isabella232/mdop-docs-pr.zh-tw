@@ -11,19 +11,19 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/05/2017
-ms.openlocfilehash: b09ea8161b6801c62552f1c0d0ef8455dc111e2f
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: f8a69fb323d9f47c5b906ac3abc6ec59376ee6f7
+ms.sourcegitcommit: 0a7dee11289780336d9c24ebbf27c5c1ffee441c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10802081"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "10905600"
 ---
 # 選擇要安裝的 AGPM 版本
 
 
-每個版本的 MicrosoftAdvanced 群組原則管理（AGPM）都支援特定版本的 Windows 作業系統。 我們強烈建議您在相同的作業系統行上執行 AGPM 用戶端和 AGPM 服務器。 例如，windows 10 與 Windows Server 2016、Windows 8.1 （含 Windows Server2012 R2）等等。
+每個版本的 MicrosoftAdvanced 群組原則管理 (AGPM) 都支援特定版本的 Windows 作業系統。 我們強烈建議您在相同的作業系統行上執行 AGPM 用戶端和 AGPM 服務器。 例如，windows 10 與 Windows Server 2016、Windows 8.1 （含 Windows Server2012 R2）等等。
 
-我們建議您在網域中的最新版本的作業系統上安裝 AGPM 服務器。 AGPM 使用群組原則管理主控台（GPMC）來備份及還原群組原則物件（Gpo）。 因為更新版本的 GPMC 提供其他不在舊版中提供的原則設定，您可以使用最新版本的作業系統來管理更多原則設定。
+我們建議您在網域中的最新版本的作業系統上安裝 AGPM 服務器。 AGPM 使用群組原則管理主控台 (GPMC) 來備份及還原 (Gpo) 的群組原則物件。 因為更新版本的 GPMC 提供其他不在舊版中提供的原則設定，您可以使用最新版本的作業系統來管理更多原則設定。
 
 所有版本的 AGPM 只能管理在運行 AGPM 的相同版本或舊版作業系統中所引進的原則設定。 例如，如果您在 Windows Server 2012 上安裝了 AGPM 4.0 SP2，您可以管理在 Windows Server 2012 或較舊版本中推出的原則設定，但您無法管理稍後在 Windows 8.1 或 Windows Server2012 R2 中推出的原則設定。
 
@@ -53,42 +53,47 @@ ms.locfileid: "10802081"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Windows Server 2016 或 Windows 10</p></td>
-<td align="left"><p>Windows Server 2016 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
 <td align="left"><p>支援</p></td>
 </tr>
-<tr class="even">
+ <tr class="even">
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>支援</p></td>
+</tr>
+<tr class="edd">
 <td align="left"><p>Windows Server2012 R2</p></td>
 <td align="left"><p>Windows 10</p></td>
 <td align="left"><p>支援 KB 4015786 中所述的注意事項 <a href="https://support.microsoft.com/help/4015786/known-issues-managing-a-windows-10-group-policy-client-in-windows-serv" data-raw-source="[KB 4015786](https://support.microsoft.com/help/4015786/known-issues-managing-a-windows-10-group-policy-client-in-windows-serv)"></a>
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2012 R2 或 Windows 8。1</p></td>
 <td align="left"><p>Windows Server2012 R2 或 Windows 8。1</p></td>
 <td align="left"><p>支援</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server2012 R2、Windows Server 2012 或 Windows 8。1</p></td>
 <td align="left"><p>Windows Server 2012 或 Windows 8。1</p></td>
 <td align="left"><p>支援，但無法編輯僅存在於 Windows 8.1 中的原則設定或喜好設定專案</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2008R2 或 Windows7</p></td>
 <td align="left"><p>Windows Server2008R2 或 Windows7</p></td>
 <td align="left"><p>支援，但無法編輯僅存在於 Windows 8.1 中的原則設定或喜好設定專案</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server 2012、Windows Server2008R2 或 Windows7</p></td>
-<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 （SP1）</p></td>
+<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 (SP1) </p></td>
 <td align="left"><p>支援，但無法編輯僅存在於 Windows Server2012 R2、windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的原則設定或喜好設定專案</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2008 或 Windows Vista （含 SP1）</p></td>
 <td align="left"><p>Windows Server 2012、Windows Server2008R2、Windows 8 或 Windows7</p></td>
 <td align="left"><p>不支援</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server2008 或 Windows Vista （含 SP1）</p></td>
 <td align="left"><p>Windows Server2008 或 Windows Vista （含 SP1）</p></td>
 <td align="left"><p>支援，但無法報告或編輯僅存在於 Windows Server2012 R2、windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的原則設定或喜好設定專案</p></td>
@@ -138,7 +143,7 @@ ms.locfileid: "10802081"
 </tr>
 <tr class="even">
 <td align="left"><p>Windows Server 2012、Windows Server2008R2 或 Windows7</p></td>
-<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 （SP1）</p></td>
+<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 (SP1) </p></td>
 <td align="left"><p>支援，但無法編輯僅存在於 Windows Server2012 R2、windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的原則設定或喜好設定專案</p></td>
 </tr>
 <tr class="odd">
@@ -281,11 +286,11 @@ ms.locfileid: "10802081"
 <td align="left"><p>3.0</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>未安裝 service pack 的 WindowsVista （32位）</p></td>
+<td align="left"><p>WindowsVista 沒有安裝 service pack (32 位) </p></td>
 <td align="left"><p>2.5</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Windows Server2003 （32位）</p></td>
+<td align="left"><p>Windows Server2003 (32 位) </p></td>
 <td align="left"><p>2.5</p></td>
 </tr>
 </tbody>
@@ -296,7 +301,7 @@ ms.locfileid: "10802081"
 ## 如何取得 MDOP 技術
 
 
-AGPM 4.0 SP2 是 Microsoft 桌面優化套件（MDOP）的一部分。 MDOP 是 Microsoft 軟體保證的一部分。 如需 Microsoft 軟體保證及取得 MDOP 的詳細資訊，請參閱[如何取得 mdop](https://go.microsoft.com/fwlink/?LinkId=322049) （ https://go.microsoft.com/fwlink/?LinkId=322049) 。
+AGPM 4.0 SP2 是 Microsoft 桌面優化套件 (MDOP) 的一部分。 MDOP 是 Microsoft 軟體保證的一部分。 如需 Microsoft 軟體保證及取得 MDOP 的詳細資訊，請參閱[如何取得 mdop](https://go.microsoft.com/fwlink/?LinkId=322049) (https://go.microsoft.com/fwlink/?LinkId=322049) 。
 
 ## 相關主題
 
