@@ -11,30 +11,34 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: 5660757c5fe58b52f9805add781529b47a5c0bd5
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 0cd77c05a10d6d3b43b1592fd261ccfa3f64376f
+ms.sourcegitcommit: 64dedf394f98c06588a8e5f6d56c34af5431d984
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10800187"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675789"
 ---
-# MBAM 2.5 技術參考資料
+# <a name="technical-reference-for-mbam-25"></a>MBAM 2.5 技術參考資料
 
 
-本節包含有關 Microsoft BitLocker 管理和監控（MBAM）2.5 中功能的技術資訊。
+本節包含 MICROSOFT BitLocker 系統管理與監控功能的技術資訊， (2.5) 中。
 
-## 技術參考資訊
+## <a name="technical-reference-information"></a>技術參考資訊
 
 
 -   [用戶端事件記錄檔](client-event-logs.md)
 
-    本主題提供 MBAM 的用戶端事件清單。
+    本主題提供適用于 MM 的用戶端事件清單。
 
 -   [伺服器事件記錄檔](server-event-logs.md)
 
-    本主題提供 MBAM 的伺服器事件清單。
+    本主題提供適用于 IBMM 的 Server 事件清單。
 
-## MBAM 作業的其他資源
+- [BitLocker 部署比較](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
+
+    本主題提供有關 BitLocker 部署比較圖表的資訊。
+
+## <a name="other-resources-for-mbam-operations"></a>適用于 MM 作業的其他資源
 
 
 [Microsoft BitLocker Administration and Monitoring 2.5](index.md)
@@ -49,14 +53,13 @@ ms.locfileid: "10800187"
 
 [MBAM 2.5 疑難排解](troubleshooting-mbam-25.md)
 
-## 取得 MBAM 的建議嗎？
-- 在[此](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)新增或投票建議。 
-- 如需 MBAM 問題，請使用[MBAM TechNet 論壇](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
+## <a name="got-a-suggestion-for-mbam"></a>有關于 MM 的建議嗎？
+- 在這裡新增或投票支援 [建議](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)。 
+- 針對的為 ：針對[的為 ：使用 ：：使用 ：。](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)
 
- 
+ 
 
- 
-
+ 
 
 
 
