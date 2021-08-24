@@ -1,6 +1,6 @@
 ---
-title: Microsoft 企業版桌面虛擬化規劃、部署及操作指南
-description: Microsoft 企業版桌面虛擬化規劃、部署及操作指南
+title: Microsoft Enterprise Desktop Virtualization規劃、部署及操作指南
+description: Microsoft Enterprise Desktop Virtualization規劃、部署及操作指南
 author: dansimp
 ms.assetid: 7bc3e120-df77-4f4c-bc8e-7aaa4c2a6525
 ms.pagetype: mdop, virtualization
@@ -8,23 +8,23 @@ ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: 2a5f3a617d2c7b23b530474893a68a60c2d5b189
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 2cbdb429349cc337d64912bd846173e6f61ae12d
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10795558"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910788"
 ---
-# Microsoft 企業版桌面虛擬化規劃、部署及操作指南
+# <a name="microsoft-enterprise-desktop-virtualization-planning-deployment-and-operations-guide"></a>Microsoft Enterprise Desktop Virtualization規劃、部署及操作指南
 
 
-![microsoft 企業版桌面虛擬化](images/medv.gif)
+![Microsoft 企業桌面虛擬化。](images/medv.gif)
 
-Microsoft 企業版桌面虛擬化（MED-V）使用 Microsoft Virtual PC 提供桌面虛擬化的企業解決方案。 有了 MED-V，您可以輕鬆地在任何採用 Windows® 的桌面上建立、交付和管理公司虛擬電腦映像。
+Microsoft Enterprise Desktop Virtualization (MED-V) Microsoft Virtual PC 提供桌面虛擬化的企業解決方案。 有了 MED-V，您可以輕鬆地在任何採用 Windows® 的桌面上建立、交付和管理公司虛擬電腦映像。
 
-MED-V 是 Microsoft 桌面優化套件的一個有機元件，可供軟體保證客戶使用的動態解決方案，可協助減少應用程式部署成本，讓應用程式可以傳送成服務，並協助您更好地管理及控制企業桌面環境。
+MED-V是 Microsoft Desktop 優化套件中不可或缺的元件，這是軟體保證客戶可用的動態解決方案，可協助降低應用程式部署成本、支援以服務方式傳遞應用程式，以及協助更有效地管理及控制企業桌面環境。
 
-## 本節內容
+## <a name="in-this-section"></a>在此區段
 
 
 本指南涵蓋下列主題：
@@ -43,9 +43,9 @@ MED-V 是 Microsoft 桌面優化套件的一個有機元件，可供軟體保證
 
 [技術參考資料](technical-referencemedv-10-sp1.md)
 
- 
+ 
 
- 
+ 
 
 
 

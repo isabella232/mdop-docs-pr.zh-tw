@@ -11,95 +11,95 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/15/2018
-ms.openlocfilehash: c3b205d4f0b4b18cf8bdbf51982b5a59e5e1b9d5
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 139980fb6712b40685a41bab45610da670803afa
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10800083"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910618"
 ---
-# MBAM 2.5 部署的功能圖例
+# <a name="illustrated-features-of-an-mbam-25-deployment"></a>MBAM 2.5 部署的功能圖例
 
 
-本主題描述針對下列拓撲進行 Microsoft BitLocker 管理和監控（MBAM）2.5 部署的個別功能：
+本主題說明適用于下列拓撲的 Microsoft BitLocker 系統管理與監控 (管理與監控) 2.5 部署：
 
--   獨立 MBAM
+-   獨立式管理
 
--   System Center Configuration Manager 整合
+-   System Center Configuration Manager集成
 
 **重要**  
-這些功能不代表部署 MBAM 的建議結構。 此資訊只能用來瞭解組成 MBAM 部署的個別功能。 請參閱適用于[MBAM 2.5 的高層次架構](high-level-architecture-for-mbam-25.md)，以取得 MBAM 的建議架構。
+這些功能並不代表部署 MM 的建議架構。 請僅以此資訊做為指南，瞭解由一個管理及管理管理計畫所建立之個別功能。 請參閱 [適用于 2.5 的高層級架構，](high-level-architecture-for-mbam-25.md) 以瞭解適用于該架構的推薦架構。
 
 
 
-如需本主題中所述軟體支援版本的清單，請參閱[MBAM 2.5 支援](mbam-25-supported-configurations.md)的設定。
+有關本主題中提及的軟體支援版本清單，請參閱[適用于支援的組配置。](mbam-25-supported-configurations.md)
 
-## <a href="" id="bkmk-standalone"></a> MBAM 獨立拓朴
+## <a name="mbam-stand-alone-topology"></a><a href="" id="bkmk-standalone"></a> 獨立拓撲
 
 
-下列影像和表格說明 MBAM 獨立拓撲中的功能。
+下圖和表格說明一個 INM 獨立拓撲中的功能。
 
-![mbab2\-5](images/mbam2-5-standalonecomponents.png)
+![mbab2\-5。](images/mbam2-5-standalonecomponents.png)
 
 |功能類型|描述|資料庫|
 |-|-|-|
-|復原資料庫|此資料庫儲存從 MBAM 用戶端電腦收集的復原資料。|此功能是在執行 Windows Server 的伺服器以及支援的 SQL Server 實例上設定。|
-|合規性和審核資料庫|此資料庫儲存合規性資料，主要用於 SQL Server Reporting Services 主機的報表。|此功能是在執行 Windows Server 的伺服器以及支援的 SQL Server 實例上設定。|
-|合規性與審計報告|||
-|報告 Web 服務|此 web 服務可讓您在管理與監控網站以及儲存報告資料的 SQL Server 實例之間進行通訊。|此功能已安裝在執行 Windows Server 的伺服器上。|
-|報告網站（管理和監控網站）|您可以從 [管理和監控] 網站查看報告。 報告會提供企業中用戶端電腦的復原審核及合規性狀態資料。|此功能是在執行 Windows Server 的伺服器上設定。|
-|SQL Server Reporting Services （SSRS）|報告是在 SSRS 資料庫實例中設定。 報告可以直接從 SSRS 查看，或從管理和監控網站查看。|此功能是在執行 Windows Server 的伺服器以及執行 SSRS 的支援的 SQL Server 實例上設定。|
-|自助服務伺服器|||
-|自助服務 Web 服務|此 web 服務是由 MBAM 用戶端和 [管理及監視] 網站和自助服務入口網站使用，以與恢復資料庫進行通訊。|此功能已安裝在執行 Windows Server 的電腦上。|
-|自助式網站（自助服務入口網站）|此網站可讓用戶端電腦上的使用者能夠獨立登入網站，以取得復原金鑰（如果他們遺失或忘記其 BitLocker 密碼）。|此功能是在執行 Windows Server 的電腦上設定。|
-|管理和監控伺服器|||
-|管理和監控 Web 服務|MBAM 用戶端和網站會使用監視 Web 服務來與資料庫進行通訊。|此功能已安裝在執行 Windows Server 的電腦上。|
+|修復資料庫|此資料庫會儲存從 SQLM 用戶端電腦收集的修復資料。|這項功能是在伺服器執行伺服器Windows和支援的 SQL Server實例上。|
+|合規性與稽核資料庫|此資料庫會儲存合規性資料，這些資料主要用於主機SQL Server Reporting Services報表。|這項功能是在伺服器執行伺服器Windows和支援的 SQL Server實例上。|
+|合規性和稽核報告|||
+|報告 Web 服務|此 Web 服務可讓系統管理與監控網站與儲存報表資料SQL Server實例之間的通訊。|這項功能會安裝在執行伺服器Windows伺服器上。|
+|報告網站 (系統管理與監控網站) |您從系統管理與監控網站查看報告。 報告會提供企業用戶端電腦的修復稽核和合規性狀態資料。|此功能是在執行伺服器伺服器Windows上。|
+|SQL Server Reporting Services (SSRS) |報表在 SSRS 資料庫實例中已配置。 您可以直接從 SSRS 或系統管理與監控網站來查看報告。|此功能是在執行 SSRS 的伺服器上Windows伺服器，以及SQL Server SSRS 的受支援實例。|
+|Self-Service伺服器|||
+|Self-Service Web 服務|此 Web 服務會由管理與監控網站及 Self-Service網站使用，以與修復資料庫通訊。|這項功能會安裝在執行伺服器Windows電腦上安裝。|
+|Self-Service網站 (自助入口網站) |這個網站可讓用戶端電腦上的使用者獨立地登錄網站，以取得修復金鑰 ，如果他們失去或忘記 BitLocker 密碼。|此功能是在執行伺服器的電腦上Windows。|
+|系統管理與監控伺服器|||
+|系統管理與監控 Web 服務|監控 Web 服務會由管理與資料庫通訊的一部分，由該客戶與網站使用。|這項功能會安裝在執行伺服器Windows電腦上安裝。|
 
 **重要**  
-在 Microsoft BitLocker 管理和監控（MBAM） 2.5 SP1 中不再提供自助服務 Web 服務，其中的 MBAM 用戶端、管理和監控網站，以及自助式入口網站直接與恢復資料庫進行通訊。
+microsoft BitLocker 系統管理與監控 (的) 2.5 SP1 中不再提供 Self-Service Web 服務，其中，MICROSOFT BITLocker 用戶端、系統管理與監控網站及 Self-Service 入口網站會直接與修復資料庫通訊。
 
 **重要**  
-因為 MBAM 用戶端和網站直接與復原資料庫通訊，所以在 Microsoft BitLocker 管理和監控（MBAM） 2.5 SP1 中已不再提供監視 Web 服務。
+Microsoft BitLocker 系統管理與監控 () 2.5 SP1 不再提供監控 Web 服務，因為 MICROSOFT BitLocker 用戶端和網站會直接與修復資料庫通訊。
 
 
-## <a href="" id="bkmk-cmintegrated"></a>System Center Configuration Manager 整合拓撲
+## <a name="system-center-configuration-manager-integration-topology"></a><a href="" id="bkmk-cmintegrated"></a>System Center Configuration Manager整合拓撲
 
-下列影像和表格說明系統中心 Configuration Manager 整合拓撲中的功能。
+下圖和表格說明整合拓撲System Center Configuration Manager功能。
 
-![mbam2\-5](images/mbam2-5-cmcomponents.png)
+![5。](images/mbam2-5-cmcomponents.png)
 
 **重要**  
-在 Microsoft BitLocker 管理和監控（MBAM） 2.5 SP1 中不再提供自助服務 Web 服務，其中的 MBAM 用戶端、管理和監控網站，以及自助式入口網站直接與恢復資料庫進行通訊。
+microsoft BitLocker 系統管理與監控 (的) 2.5 SP1 中不再提供 Self-Service Web 服務，其中，MICROSOFT BITLocker 用戶端、系統管理與監控網站及 Self-Service 入口網站會直接與修復資料庫通訊。
 
 **警告**  
-因為 MBAM 用戶端和網站直接與復原資料庫通訊，所以在 Microsoft BitLocker 管理和監控（MBAM） 2.5 SP1 中已不再提供監視 Web 服務。
+Microsoft BitLocker 系統管理與監控 () 2.5 SP1 不再提供監控 Web 服務，因為 MICROSOFT BitLocker 用戶端和網站會直接與修復資料庫通訊。
 
 
 |                        功能類型                        |                                                                                                    描述                                                                                                    |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                    自助服務伺服器                     |                                                                                                                                                                                                                   |
-|                  自助服務 Web 服務                  |                                                 此 web 服務是由 MBAM 用戶端和自助入口網站使用，以與恢復資料庫進行通訊。                                                  |
-|                    自助服務網站                    |                          此網站可讓用戶端電腦上的使用者能夠獨立登入網站，以取得復原金鑰（如果他們遺失或忘記其 BitLocker 密碼）。                          |
-| 管理和監控伺服器/復原審核報告 |                                                                                                                                                                                                                   |
-|         管理和監控 Web 服務          |                               此 web 服務可讓您在管理與監控網站以及儲存報告資料的 SQL Server 資料庫之間進行通訊。                               |
-|           管理和監控網站            | [恢復審核] 報告是透過 [管理] 和 [監視] 網站查看。 使用 Configuration Manager 主控台來查看所有其他報表，或直接從 SQL Server Reporting Services 查看報表。 |
+|                    Self-Service伺服器                     |                                                                                                                                                                                                                   |
+|                  Self-Service Web 服務                  |                                                 此 Web 服務會由 Self-Service 用戶端和入口網站使用，以與修復資料庫通訊。                                                  |
+|                    Self-Service網站                    |                          這個網站可讓用戶端電腦上的使用者獨立地登錄網站，以取得修復金鑰 ，如果他們失去或忘記 BitLocker 密碼。                          |
+| 系統管理與監控伺服器/修復稽核報告 |                                                                                                                                                                                                                   |
+|         系統管理與監控 Web 服務          |                               此 Web 服務可讓系統管理與監控網站與SQL Server資料儲存之資料庫之間的通訊。                               |
+|           系統管理與監控網站            | 系統從系統管理與監控網站查看修復稽核報告。 使用 Configuration Manager 主控台來查看所有其他報表，或直接從 SQL Server Reporting Services。 |
 |                         資料庫                          |                                                                                                                                                                                                                   |
-|                     復原資料庫                      |                                                                 此資料庫儲存從 MBAM 用戶端電腦收集的復原資料。                                                                  |
-|                       審核資料庫                       |                                                                   此資料庫儲存有關恢復嘗試與活動的審核資訊。                                                                    |
+|                     修復資料庫                      |                                                                 此資料庫會儲存從 SQLM 用戶端電腦收集的修復資料。                                                                  |
+|                       稽核資料庫                       |                                                                   此資料庫會儲存有關修復嘗試和活動的稽核資訊。                                                                    |
 |               Configuration Manager 功能               |                                                                                                                                                                                                                   |
-|          Configuration Manager 管理主控台          |                                                                   這個主控台內嵌于 Configuration Manager 中，用來查看報告。                                                                   |
-|               Configuration Manager 報告                |                                                             報告顯示企業中用戶端電腦的合規性與復原審核資料。                                                              |
-|               SQL Server Reporting Services                |                                                SSRS 會啟用 MBAM 報告。 報告可以直接從 SSRS 或從 Configuration Manager 主控台查看。                                                 |
+|          Configuration Manager 管理主控台          |                                                                   此主控台內建于 Configuration Manager 中，可用來查看報表。                                                                   |
+|               Configuration Manager 報表                |                                                             報告會顯示您企業用戶端電腦的合規性及修復稽核資料。                                                              |
+|               SQL Server Reporting Services                |                                                SSRS 會啟用 <管理與管理報告>。 可以直接從 SSRS 或 Configuration Manager 主控台來查看報表。                                                 |
 
-## 相關主題
+## <a name="related-topics"></a>相關主題
 
 [MBAM 2.5 的概要架構](high-level-architecture-for-mbam-25.md)
 
 [開始使用 MBAM 2.5](getting-started-with-mbam-25.md)
 
-## 取得 MBAM 的建議嗎？
-- 在[此](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)新增或投票建議。 
-- 如需 MBAM 問題，請使用[MBAM TechNet 論壇](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
+## <a name="got-a-suggestion-for-mbam"></a>有關于 MM 的建議嗎？
+- 在這裡新增或投票支援 [建議](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)。 
+- 針對針對的 MM 問題，請使用[的是 ：。。](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)
 
 
 

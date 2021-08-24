@@ -11,38 +11,38 @@ ms.mktglfcycl: support
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: 0e5ff1069d8be5ec1cd87d4db64e6b8f114c91b3
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 6b7f5e1b906f22146016c9c485b02b39edbf083c
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10800275"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910648"
 ---
-# DaRT 10
+# <a name="dart-10"></a>DaRT 10
 
 
-![mbam 標誌](images/mbam-logo-sm.gif)
+![一個標誌。](images/mbam-logo-sm.gif)
 
-## <a href="" id="administrator-s-guide-for--product-name-"></a>[產品名稱] 的系統管理員指南 &lt;&gt;
+## <a name="administrators-guide-for-ltproduct-namegt"></a><a href="" id="administrator-s-guide-for--product-name-"></a>產品名稱 &lt; 系統管理員指南&gt;
 
 
-已發佈： * &lt; 發佈 &gt; 日期*
+發佈日期* &lt; ：發佈 &gt; 日期*
 
-*在此加入產品的總經理摘要概覽。*
+*在此包含產品的執行摘要概觀。*
 
-本指南說明如何安裝及使用* &lt; 產品名稱 &gt; *。 本指南適用于系統管理員和 IT 人員。
+本指南說明如何安裝和使用* &lt; 產品名稱 &gt; *。 本指南適用于系統管理員和 IT 人員。
 
-如需* &lt; 產品名稱 &gt; *的最新檔，請參閱這裡的 [在*此插入連結*] 首頁。
+有關產品*名稱最新檔 &lt; &gt; *，請參閱*此處首頁的插入*連結。
 
-如需* &lt; 產品名稱 &gt; *的版本資訊，請參閱*在此插入連結*。
+有關產品名稱的* &lt; 發行資訊 &gt; *，請參閱*在這裡插入連結*。
 
-### 意見反應
+### <a name="feedback"></a>意見反應
 
-傳送關於本檔的建議與意見 <mdopdocs@microsoft.com> 。
+將這份檔的建議和批註傳送至 <mdopdocs@microsoft.com> 。
 
- 
+ 
 
- 
+ 
 
 
 

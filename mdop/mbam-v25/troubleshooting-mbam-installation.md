@@ -1,6 +1,6 @@
 ---
 title: MBAM 2.5 安裝問題疑難排解
-description: 簡介如何針對 MBAM 2.5 安裝問題進行疑難排解。
+description: 如何疑難排解 2.5 安裝問題。
 author: Deland-Han
 ms.reviewer: dcscontentpm
 manager: dansimp
@@ -8,94 +8,94 @@ ms.author: delhan
 ms.sitesec: library
 ms.prod: w10
 ms.date: 09/16/2019
-ms.openlocfilehash: ed56a87496e09601c44028b7f948eda39143e8c0
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 6ea152792801c630fa365f37d1668d1a4d84b3a5
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10800200"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910628"
 ---
-# MBAM 2.5 安裝問題疑難排解
+# <a name="troubleshooting-mbam-25-installation-problems"></a>MBAM 2.5 安裝問題疑難排解
 
-本文將說明如何在獨立設定中針對 Microsoft BitLocker 管理和監控（MBAM）2.5 安裝問題進行疑難排解。
+本文將介紹如何在獨立組 (中疑難排解 Microsoft BitLocker 系統管理 (監控) 2.5 安裝問題。
 
-## 參照 MBAM 記錄檔以進行疑難排解
+## <a name="referring-mbam-log-files-for-troubleshooting"></a>參照用於疑難排解的一些 MM 記錄檔案
 
-MBAM 包括伺服器安裝、用戶端安裝和事件的記錄。 應參閱此記錄以進行疑難排解。 
+IBMM 包含伺服器安裝、用戶端安裝和事件的記錄。 此記錄應參考以進行疑難排解。 
  
-### MBAM server 安裝記錄檔
+### <a name="mbam-server-installation-log-files"></a>IBMM 伺服器安裝記錄檔案
 
-在 MBAM 安裝期間，MBAMServerSetup.exe 會在使用者的% temp% 資料夾中產生下列記錄檔：<br /> **Microsoft_BitLocker_Administration_and_Monitoring_<14 個數字> .log**
+MBAMServerSetup.exe在安裝期間，在使用者的 %temp% 資料夾中產生下列記錄檔案：<br /> **Microsoft_BitLocker_Administration_and_Monitoring_<14 個數字>記錄**
 
-MBAMServerSetup.exe 記錄在 MBAM 設定和 MBAM 伺服器功能安裝期間所採取的動作：<br /> **Microsoft_BitLocker_Administration_and_Monitoring_<14_numbers # C1_0_MBAMServer.msi .log**
+MBAMServerSetup.exe記錄在<a0></a0>的<a1> </a1> <a2>：</a2><a3></a3><a4></a4><a5></a5><A5<br /> **Microsoft_BitLocker_Administration_and_Monitoring_<14_numbers>_0_MBAMServer.msi.log**
 
-MBAMServerSetup.exe 記錄安裝期間所採取的其他動作。
+MBAMServerSetup.exe記錄安裝期間執行的其他動作。
 
-### MBAM 用戶端安裝記錄檔
+### <a name="mbam-client-installation-log-file"></a>管理與管理管理用戶端安裝記錄檔案
 
-用戶端安裝會記錄在% temp% 資料夾中的下列記錄檔（或自訂位置，視用戶端的安裝方式而定）： <br />**MSI \<five random characters\> .log**
+用戶端安裝會記錄在 %temp% 資料夾的下列記錄 (或自訂位置中，視用戶端的安裝方式) ： <br />**MSI \<five random characters\> .log**
 
-此記錄包含在 MBAM 用戶端安裝期間所採取的動作。
+此記錄包含在安裝期間執行的動作。
  
-### MBAM 用戶端事件-記錄通道
+### <a name="mbam-client-event-logging-channel"></a>資料記錄通道
 
-MBAM 有個別的事件記錄通道。 系統會在事件檢視器的 [**應用程式和服務記錄**  >  **Microsoft**  >  **Windows**  >  **MBAM**] 底下找到 [管理員]、[分析] 和 [操作] 記錄檔。
+該 MM 有個別的事件記錄通道。 系統管理、分析及營運記錄檔案位於事件檢視器中，位於應用程式和服務記錄**** Microsoft Windows  >  ****  >  ****  >  **中**。
 
-下表提供每個事件記錄記錄的簡短描述。
+下表提供每個事件記錄簡介。
  
-|事件記錄檔| 說明|
+|事件記錄檔| 描述|
 |----------|-------|
-|Microsoft-Windows-MBAM/系統管理員|  包含錯誤訊息|
-|Microsoft-Windows-MBAM/分析|   包含高級記錄資訊|
-|Microsoft-Windows-MBAM/運作|    包含成功訊息|
+|Microsoft-Windows-MICROSOFT-WINDOWS M/Admin|  包含錯誤訊息|
+|Microsoft-Windows-WINDOWS/Analytic|   包含進位記錄資訊|
+|Microsoft-Windows-MICROSOFT-WINDOWS/營運|    包含成功訊息|
 
-### MBAM 伺服器事件-記錄通道
+### <a name="mbam-server-event-logging-channel"></a>IBMM 伺服器事件記錄通道
 
-記錄檔位於 [事件檢視器] 中的 [**應用程式和服務記錄**  >  **Microsoft**  >  **Windows**  >  **MBAM**] 底下。 下表包含在 MBAM 2.5 中引入的伺服器事件記錄：
+記錄檔案位於事件檢視器中，位於應用程式與**服務記錄**Microsoft Windows  >  ****  >  ****  >  **中**。 下表包含在 IBMM 2.5 中引入的伺服器事件記錄：
 
-|事件記錄檔| 說明|
+|事件記錄檔| 描述|
 |--------|-------------|
-|Microsoft-Windows-MBAM/系統管理員|  包含錯誤訊息|
-|Microsoft-Windows-MBAM/分析|   包含高級記錄資訊|
-|Microsoft-Windows-MBAM/運作|    包含成功訊息|
+|Microsoft-Windows-MICROSOFT-WINDOWS M/Admin|  包含錯誤訊息|
+|Microsoft-Windows-WINDOWS/Analytic|   包含進位記錄資訊|
+|Microsoft-Windows-MICROSOFT-WINDOWS/營運|    包含成功訊息|
 
-### MBAM web 服務記錄
+### <a name="mbam-web-service-logs"></a>2010 年 12 月 15 日
 
-每個 MBAM web 服務記錄都會將記錄資訊寫入 SVCLOG 檔案。 根據預設，每個 web 服務都會在 C:\inetpub\Microsoft BitLocker 管理 Solution\Logs 資料夾中使用其名稱的資料夾下寫入追蹤檔案。
+每個的 WEB 服務記錄記錄會將記錄資訊寫入 SVCLOG 檔案。 根據預設，每個 Web 服務在 C：\inetpub\Microsoft BitLocker Management Solution\Logs 資料夾中使用其名稱的資料夾下寫入追蹤檔案。
 
-您可以使用服務追蹤檢視器工具（Microsoft Visual Studio 的一部分）來查看 svclog 追蹤。
+您可以使用服務追蹤檢視器工具 (部分Microsoft Visual Studio) svclog 追蹤。
 
-## 疑難排解加密和報告問題
+## <a name="troubleshooting-encryption-and-reporting-issues"></a>加密與報告問題的疑難排解
 
-本節包含伺服器功能、用戶端功能、配置設定及已知問題的疑難排解資訊：
+本節包含伺服器功能、用戶端功能、設定設定和已知問題的疑難排解資訊：
  
-### MBAM 用戶端安裝，群組原則設定
+### <a name="mbam-client-installation-group-policy-settings"></a>管理管理管理程式用戶端安裝、群組原則設定
 
-判斷用戶端電腦上是否已安裝 MBAM 代理程式。 安裝 MBAM 時，它會建立一個名為 BitLocker 管理用戶端服務的服務。 此服務已設定為自動啟動。 判斷服務是否正在執行。
+判斷是否已在用戶端電腦上安裝該管理管理代理程式。 安裝之後，它會建立名為 BitLocker 管理用戶端服務的服務。 此服務已配置為自動啟動。 判斷服務是否進行中。
 
-確定用戶端電腦上已套用 [MBAM] 群組原則設定。 如果用戶端電腦上已套用群組原則設定，就會建立下列登錄子機碼： **HKEY_LOCAL_MACHINE \software\policies\microsoft\fve\mdopbitlockermanagement**
+請確定在用戶端電腦上已應用了 B0 電腦管理區策略設定 。 如果用戶端電腦上已使用群組原則設定，會建立下列註冊表子機HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement****
 
-確認此金鑰存在，並使用每個群組原則設定的值來填入。
+請確認此金鑰是否存在，並且會使用每個群組原則設定的值來填上。
 
-### 在初始延遲期間 MBAM 代理程式
+### <a name="mbam-agent-in-the-initial-delay-period"></a>初始延遲期間中的一個服務代理程式
 
-MBAM 用戶端無法在安裝後立即啟動作業。 在 MBAM Agent 啟動作業之前，會有1到18分鐘的初始隨機延遲時間。 除了初始延遲之外，還會有至少90分鐘的延遲。 （延遲取決於針對檢查用戶端狀態的頻率所設定的群組原則設定。）因此，在用戶端開始作業前的總延遲是*隨機啟動延遲*  +  *用戶端檢查頻率的延遲*。
+安裝之後，即無法立即啟動作業。 初始隨機延遲為 1 到 18 分鐘，然後才開始其作業。 除了初始延遲之外，還有至少 90 分鐘的延遲。  (延遲取決於針對檢查用戶端狀態的頻率所設定之群組原則設定。) 因此，用戶端啟動作業前的總延遲是隨機啟動延遲用戶端檢查**  +  *頻率*延遲。
 
-如果 [操作] 和 [系統管理] 事件記錄是空白的，用戶端還沒有啟動該作業，而且是在前面提到的延遲期間中。 如果您想要略過延遲，請執行下列步驟：
+如果營運和系統管理事件記錄為空白，則用戶端尚未開始作業，且目前為先前提及的延遲期間。 如果您想要忽略延遲，請遵循下列步驟：
  
-1. 停止 BitLocker 管理用戶端服務服務。
+1. 停止 BitLocker 管理用戶端服務。
 
-2. 在**HKEY_LOCAL_MACHINE \software\microsoft\mbam** registry 子機碼底下，**建立 NoStartupDelay**登錄值，將其類型設定為 [ **REG_DWORD**]，然後將它的值設定為**1**。
+2. 在**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MBAM註冊表**子機值下，建立**NoStartupDelay**註冊表值，將類型設為 REG_DWORD **，然後將**其值設為**1。**
 
-3. 在 [ **HKEY_LOCAL_MACHINE \software\policies\microsoft\fve\mdopbitlockermanagement**] 底下，將 [ **ClientWakeupFrequency** ] 和 [ **StatusReportingFrequency** ] 值設定為**1**。 當您在電腦上進行群組原則更新之後，這些值就會還原為原始設定。
+3. 在**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement**中，將**ClientWakeupFrequency**和**StatusReportingFrequency**值設為**1。** 當群組原則更新位於電腦上之後，這些值會還原為原始設定。
 
-4. 啟動 BitLocker 管理用戶端服務服務。
+4. 啟動 BitLocker 管理用戶端服務。
 
-在服務啟動後，如果您在本機電腦上登入，但沒有任何錯誤，您應該會在一分鐘內收到加密電腦的要求。 如果您沒有收到要求，您應該在 MBAM 系統管理記錄中查看任何錯誤專案。
+服務啟動之後，如果您在電腦本地登入且沒有錯誤，您應該在一分鐘內收到加密電腦的要求。 如果您未收到要求，您應該檢查 <管理及管理記錄管理中是否有任何錯誤專案。
 
-### 電腦沒有 TPM 裝置，或未在 BIOS 中啟用 TPM 裝置
+### <a name="computer-does-not-have-a-tpm-device-or-the-tpm-device-is-not-enabled-in-the-bios"></a>電腦沒有 TPM 裝置，或在BIOS 中未啟用 TPM 裝置
 
-查看 MBAM 系統管理員事件記錄檔。 您會在 MBAM 系統管理員事件記錄中看到類似下列的事件專案：
+請閱閱該名管理管理員事件記錄。 在 INM 系統管理事件記錄中，您會看到類似下列的事件專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -110,21 +110,21 @@ MBAM 用戶端無法在安裝後立即啟動作業。 在 MBAM Agent 啟動作�
     The TPM hardware is missing.
     TPM is needed to encrypt the operating system drive with any TPM protector.
 
-開啟 [TPM 管理（TPM）]，並檢查電腦是否有 TPM 裝置。 如果您的 devmgmt 沒有顯示裝置，請開啟 [裝置管理器] （），然後檢查 [安全裝置] 底下的 [受信任的平臺] 模組。 如果您沒有看到受信任的平臺模組裝置，這可能是下列其中一個原因所導致：
+開啟 TPM 管理 (tpm.msc) ，然後檢查電腦是否有 TPM 裝置。 如果 tpm.msc 未顯示裝置，請開啟 Device Manager (devmgmt.msc) ，並檢查安全性裝置下的信任平臺模組。 如果您沒看到信任的平臺模組裝置，這可能是因為下列其中一個原因：
 
-* 您的系統沒有受信任的平臺模組（TPM/安全性）裝置。
+* 您的系統沒有信任的平臺模組 (TPM/Security) 裝置。
 
-* TPM 裝置在 BIOS 中停用。
+* 在BIOS 中，TPM 裝置已停用。
 
-* 在 BIOS 中啟用 TPM 裝置，但在 BIOS 中停用了從作業系統設定管理 TPM 裝置。
+* TPM 裝置在BIOS 中已啟用，但從作業系統設定管理 TPM 裝置在BIOS 中會停用。
 
-* 您不是針對 TPM 裝置使用 Microsoft 驅動程式。 查看 [裝置管理器] 中所列的裝置，以找出 Microsoft TPM 裝置驅動程式。
+* 您不是在 TPM 裝置上使用 Microsoft 驅動程式。 查看裝置管理器中列出的裝置，以識別 Microsoft TPM 裝置驅動程式。
 
-如果 TPM 裝置未使用 C:\Windows\System32\tpm.sys 驅動程式，您應該選取 C:\Windows\Inf\tpm.inf 檔案來更新驅動程式。
+如果 TPM 裝置並未使用 C:\Windows\System32\tpm.sys 驅動程式，您應該選取 C：\Windows\Inf\tpm.inf 檔案來更新驅動程式。
 
-### 電腦沒有有效的系統磁碟分割
+### <a name="computer-does-not-have-a-valid-system-partition"></a>電腦沒有有效的 SYSTEM 分區
 
-查看 MBAM 系統管理員事件記錄檔。 您會在 MBAM 系統管理員事件記錄中看到類似下列的事件專案：
+請閱閱該名管理管理員事件記錄。 在 INM 系統管理事件記錄中，您會看到類似下列的事件專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -139,21 +139,21 @@ MBAM 用戶端無法在安裝後立即啟動作業。 在 MBAM Agent 啟動作�
     The system volume is missing.
     SystemVolume is needed to encrypt the operating system drive.
 
-BitLocker 需要系統磁碟分割來啟用加密（[在 Windows 7 中使用 BitLocker 磁片磁碟機加密）：常見問題](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee449438(v=ws.10)?redirectedfrom=MSDN#bkmk_partitions)）。
+BitLocker 需要 SYSTEM 分區才能在 (7 中啟用[bitLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee449438(v=ws.10)?redirectedfrom=MSDN#bkmk_partitions)磁片磁碟機加密Windows：常見問題) 。
 
-MBAM 不會自動建立系統磁碟分割。 您可以使用 BitLocker 磁碟機準備實用程式（bdehdcfg.exe）來建立系統磁碟分割並移動所需的啟動檔案。
+但是，系統磁碟分割不會自動建立。 您可以使用 BitLocker 磁片磁碟機準備公用程式 (bdehdcfg.exe) 建立系統磁碟分割並移動所需的啟動檔案。
 
-例如，您可以使用命令 **% windir% \system32\bdeHdCfg.exe 目標預設大小 300-quiet** ，在您部署 MBAM 以進行磁片加密前，預先準備好磁片磁碟機。 這需要重新開機。 您也可以在需要時編寫動作腳本。 下列檔說明 BitLocker 磁碟機準備工具：
+例如，您可以使用命令 **%windir%\system32\bdeHdCfg.exe -target 預設 -size 300 -quiet，** 在部署要加密磁片磁碟機的部署時，先以無提示方式準備磁片磁碟機。 這需要重新開機。 如果需要，您也可以為動作編寫腳本。 下列檔說明 BitLocker 硬碟準備工具：
 
-[BitLocker 磁片磁碟機準備工具的描述](https://support.microsoft.com/help/933246)
+[BitLocker 硬碟準備工具的描述](https://support.microsoft.com/help/933246)
 
-### 磁片磁碟機沒有格式化成具有相容的檔案系統
+### <a name="drives-are-not-formatted-to-have-a-compatible-file-system"></a>磁片磁碟機未格式化為具有相容的檔案系統
 
-請參閱[TechNet 文章，瞭解 BitLocker 的檔案系統需求](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee449438(v=ws.10)?redirectedfrom=MSDN#bkmk_hsrequirements)。
+請參閱 [TechNet 文章，瞭解 BitLocker 的檔案系統需求](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee449438(v=ws.10)?redirectedfrom=MSDN#bkmk_hsrequirements)。
 
-### 群組原則衝突
+### <a name="group-policy-conflict"></a>群組原則衝突
 
-您會在 MBAM 系統管理員事件記錄中看到類似下列的事件專案：
+在 INM 系統管理事件記錄中，您會看到類似下列的事件專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -168,21 +168,21 @@ MBAM 不會自動建立系統磁碟分割。 您可以使用 BitLocker 磁碟機
     Detected Fixed Data Drive volume encryption policies conflict.
     Check BitLocker and MBAM policies related to FDD drive protectors.
 
-確認您的群組原則設定，以確認您在 MBAM 群組原則設定之間沒有相衝突的設定。
+驗證您的群組原則設定，以確保您沒有在的群組原則設定之間設定衝突。
 
-您應該使用 [MDOP MBAM] 範本而不是 BitLocker 磁片磁碟機加密範本來設定群組原則。
+您應該使用 MDOP 的 MDOP BM 範本來設定群組原則，而不是 BitLocker 磁片磁碟機加密範本。
 
 例如：
 
-在 [作業系統磁片磁碟機加密設定] 下，您已選取 [TPM] 作為保護器，而且您也已選取 [**允許增強的 pin 以進行啟動**]。 因為僅 TPM 保護不需要 PIN，所以這些是衝突的設定。 因此，您應該停用 [增強式 Pin] 設定。
+在作業系統磁片磁碟機加密設定下，您選取 TPM 做為保護程式，而且您也選取了允許 **增強型 PIN 啟動**。 這些設定相互衝突，因為 TPM 僅保護不需要 PIN。 因此，您應該停用增強的 PIN 設定。
 
-### 使用者可能已要求豁免
+### <a name="user-may-have-requested-an-exemption"></a>使用者可能要求免稅
 
-如果您已啟用電腦配置 \ 管理範本 \Windows Components\MDOP MBAM （BitLocker Management） \Client Management\Configure 使用者豁免原則組原則設定，系統會提供要求例外的選項。
+如果您啟用電腦群組設定\系統管理範本\Windows Components\MDOP 慢化管理 (BitLocker 管理) \Client Management\Configure User exemption policy Group Policy 設定，系統就會提供使用者要求免稅的選項。
 
-根據預設，如果使用者要求免除，該免除將有效期為7天，而且使用者在此期間將不會收到加密的提示。 （您可以在原則配置期間增加或減少預設值。）在免除期限結束之後，系統會提示使用者進行加密。
+根據預設，如果使用者要求免稅，免稅的有效期為 7 天，且使用者不會在此期間收到加密的提示。  (在策略組定期間，預設值可能會增加或減少。) 免稅期間結束後，系統會提示使用者加密。
 
-當電腦處於 [使用者豁免] 下時，在 MBAM 系統管理員事件記錄中，您會看到下列專案：
+當電腦在使用者免稅時，您將在 INM 系統管理事件記錄中看到下列專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -196,21 +196,21 @@ MBAM 不會自動建立系統磁碟分割。 您可以使用 BitLocker 磁碟機
     Description:
     The user is exempt from encryption.
 
-如果您想要手動覆寫電腦的使用者豁免，請遵循下列步驟：
+如果您想要手動取代電腦的使用者免稅，請遵循下列步驟：
  
-1. 在下列登錄子機碼底下，將 AllowUserExemption 值設定為**0** ： <br />
-**HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement**
+1. 將 AllowUserExemption 值設定為 **0** 在下列註冊表子機下： <br />
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement**
 
-2. 刪除下列登錄子機子 AgentVersion 下的所有登錄值（除了是 [ ** **]、[ **EncodedComputerName**] 及 [**安裝**]）：<br />
-**HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MBAM**
+2. 刪除下列註冊表子機下的所有註冊表值，但**AgentVersion、EncodedComputerName**和**已安裝除外**： ****<br />
+**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MBAM**
 
-    **記事**您必須重新開機 MBAM 代理程式，變更才會生效。
+    **附注** 您必須重新開機該資料代理程式，變更才能生效。
 
-請注意，在您將群組原則套用到電腦之後，這些值可能會還原為原始設定。
+請注意，將群組原則適用于電腦後，這些值可能會還原為原始設定。
 
-### WMI 問題
+### <a name="wmi-issue"></a>WMI 問題
 
-MBAM 使用 win32_encryptablevolume 類別的方法來管理 BitLocker。 如果此模組已取消註冊或損毀，MBAM 用戶端將無法正常運作，而且您會在 MBAM 系統管理員事件記錄中看到下列事件專案：
+在管理 BitLocker 時，WIN32_ENCRYPTABLEVOLUME採用不同類別的方法。 如果此模組未註冊或已損壞，則的  ：：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -228,21 +228,21 @@ MBAM 使用 win32_encryptablevolume 類別的方法來管理 BitLocker。 如果
     Details:
     NULL
 
-此外，您可能會發現 [恢復] 和 [硬體] 原則不適用於錯誤碼0x8007007e。 這會轉換為「找不到指定的模組」。
+此外，您可能會注意到，修復和硬體原則不適用於錯誤碼0x8007007e。 這表示「找不到指定的模組」。
 
-若要解決此問題，您應該使用下列命令重新註冊**win32_encryptablevolume**類別：
+若要解決此問題，您應該使用下列命令重新註冊 win32_encryptablevolume**類：**
 
 ```cmd
 mofcomp c:\Windows\System32\wbem\win32_encryptablevolume.mof
 ```
 
-## MBAM 代理通訊問題的疑難排解
+## <a name="troubleshooting-mbam-agent-communication-issues"></a>疑難排解的 MM Agent 通訊問題
 
-本節包含下列與 MBAM agent 通訊相關之問題的疑難排解資訊：
+此區段包含下列與 "服務人員通訊" 相關問題的疑難排解資訊：
 
-### 不正確的 MBAM 服務 URL
+### <a name="incorrect-mbam-service-url"></a>不正確的服務 URL
 
-如果 MBAM 合規性狀態服務或復原及硬體服務的值不正確，您會在用戶端電腦上的 MBAM 系統管理員事件記錄中看到如下所示的事件專案：
+如果 INSM 合規性狀態服務或修復與硬體服務的值不正確，您就會在用戶端電腦上的 <管理管理事件記錄中，看到類似下列的事件專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -308,25 +308,25 @@ mofcomp c:\Windows\System32\wbem\win32_encryptablevolume.mof
     Details:
     The endpoint address URL is invalid.
 
-在用戶端電腦上的下列登錄子項下，確認**KeyRecoveryServiceEndPoint**和**StatusReportingServiceEndpoint**的值： <br />
-**HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement**
+在用戶端電腦上的下列註冊表子機名下，驗證 **KeyRecoveryServiceEndPoint** 和 **StatusReportingServiceEndpoint** 的值： <br />
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement**
 
-根據預設，KeyRecoveryServiceEndPoint （MBAM 復原與硬體服務端點）的 URL 會採用下列格式： <br />
-**HTTP:// \<servername\> ： \<port\> /MBAMRecoveryAndHardwareService/CoreService.svc**
+根據預設，KEYRecoveryServiceEndPoint (與硬體服務端點的 URL) 格式為： <br />
+**HTTP:// ： \<servername\> \<port\> /A0 /1993-2013-2013-2013-2013-2013-2013-2013-2013-2**
 
-根據預設，StatusReportingServiceEndpoint （MBAM 狀態報表服務端點）的 URL 會採用下列格式：<br />
-**HTTP:// \<servername\> ： \<port\> /MBAMComplianceStatusService/StatusReportingService.svc**
+根據預設，STATUSReportingServiceEndpoint (的 URL) 為下列格式：<br />
+**HTTP:// \<servername\> ： \<port\> /A0 /A0 /2012/2013/1994/433-433-2013-2013-2013-2013-2**
 
 > [!Note]
 > URL 中不應有空格。
 
 如果服務 URL 不正確，您應該在下列群組原則設定中修正服務 URL：
 
-**電腦配置**  > **原則**  > **管理範本**  > **Windows 元件**  > **MDOP MBAM （BitLocker 管理）**  > **用戶端管理**  > **設定 MBAM 服務**
+**電腦群組組**  > **政策**  > **系統管理範本**  > **Windows元件**  > **MDOP MDM (BitLocker Management) **  > **用戶端管理**  > **設定 MM Services**
 
-### 影響 MBAM 管理伺服器的連接問題
+### <a name="connectivity-issue-that-affects-the-mbam-administration-server"></a>影響 IBMM 系統管理伺服器的連接問題
 
-如果用戶端代理程式與 MBAM 管理伺服器之間存在連線問題，則 MBAM 代理程式將無法將任何更新發佈至資料庫。 在這種情況下，您會在用戶端電腦上的 MBAM 系統管理員事件記錄中發現連線失敗專案：
+如果用戶端代理程式與 IBMM 系統管理伺服器之間存在連接問題，則 IBMM 代理程式將無法將任何更新張貼至資料庫。 在此案例中，您將注意到用戶端電腦上 ，INM 系統管理事件記錄中的連接失敗專案：
 
     Log Name:      Microsoft-Windows-MBAM/Admin
     Source:        Microsoft-Windows-MBAM
@@ -380,37 +380,37 @@ mofcomp c:\Windows\System32\wbem\win32_encryptablevolume.mof
 
 基本檢查：
 
-* 透過 [名稱] 和 [IP] ping MBAM 管理伺服器來驗證基本連通性。 檢查您是否可以使用 telnet 或 portqry 連線到 MBAM 管理網站或服務埠。
+* 根據名稱和 IP ping AM 系統管理伺服器，驗證基本連接。 檢查您是否可以使用 telnet 或 portqry 來連結至的管理網站或服務埠。
 
-* 確認 IIS 服務正在 MBAM 管理和監視伺服器上執行，且 MBAM web 服務正在偵聽 MBAM 用戶端電腦上設定的同一個埠（ `netstat –ano | find "portnumber"` ）。
+* 請確認 IIS 服務在 IBMM 系統管理與監控伺服器上執行，且該網管服務正在與在 () 上所配置的相同埠 `netstat –ano | find "portnumber"` 進行聆聽。
 
-* 確認為 MBAM 網站設定的埠號碼是使用 IIS 管理員（inetmgr）。 確認埠號碼與用戶端正在其上接聽的埠號碼相同。 確認埠號碼不是由其他應用程式所共用。 例如，伺服器上的另一個應用程式不應使用相同的埠。
+* 請確認為   網站所配置的埠號碼是使用 IIS Manager (inetmgr) 。 請確定埠號碼與用戶端正在聆聽的埠號碼相同。 請確定另一個應用程式未共用埠號碼。 例如，伺服器上另一個應用程式不應使用相同的埠。
 
-* 如果有防火牆，請確定該埠已在防火牆或 proxy 伺服器中開啟。
+* 如果有防火牆，請確定埠在防火牆或 Proxy 伺服器中已開啟。
 
 * 如果用戶端與伺服器之間的通訊是安全的，請確定您使用的是有效的 SSL 憑證。
 
-* 驗證要傳送資料以進行插入的 web 伺服器與資料庫伺服器之間的網路連線。 您可以使用 ODBC 資料來源系統管理員，檢查從 web 伺服器到資料庫伺服器的資料庫連線能力。 詳細的 SQL Server 連線疑難排解資訊可在[如何疑難排解連線至 SQL Server 資料庫引擎的問題](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)中取得。
+* 確認 Web 服務器與資料要插入之資料庫伺服器之間的網路連接。 您可以使用 ODBC 資料來源系統管理員，檢查從 Web 服務器到資料庫伺服器的資料庫連接。 有關SQL Server疑難排解的詳細資訊，請參閱如何疑難排解連接[至SQL Server 資料庫引擎。](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)
 
-#### 疑難排解連接問題
+#### <a name="troubleshooting-the-connectivity-issue"></a>針對連接問題進行疑難排解
 
-確定用戶端上設定的服務 URL 正確無誤。 從 registry 複製 KeyRecoveryServiceEndPoint （**HKEY_LOCAL_MACHINE \software\policies\microsoft\fve\mdopbitlockermanagement**） URL 的值，然後在 Internet Explorer 中開啟。
+確認用戶端上所配置的服務 URL 正確無誤。 從註冊表複製 KeyRecoveryServiceEndPoint ** (HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement) ** URL 值，然後于 Internet Explorer 中開啟。
 
-同樣地，複製 StatusReportingServiceEndpoint 的 URL 值（**HKEY_LOCAL_MACHINE \software\policies\microsoft\fve\mdopbitlockermanagement**），然後在 Internet Explorer 中開啟它。
-
-> [!Note]
-> 如果您無法從用戶端電腦流覽至 URL，您應該測試從用戶端到執行 IIS 之伺服器的基本網路連線性。 請參閱上一節中的1、2、3和4點。
-
-此外，請在 [管理和監控伺服器] 上查看應用程式記錄，以取得任何錯誤。
-
-您可以在用戶端與伺服器之間建立併發網路追蹤，並查看追蹤，以判斷用戶端代理與 MBAM 管理伺服器之間的連線失敗原因。
+同樣地，複製 StatusReportingServiceEndpoint 的 URL 值 ** (HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE\MDOPBitLockerManagement) ， ** 然後于 Internet Explorer 中開啟。
 
 > [!Note]
-> 如果您可以流覽用戶端電腦的服務 Url，並在 MBAM admin 事件記錄中出現連接錯誤專案，這可能是因為管理伺服器與資料庫伺服器之間的連線失敗。
+> 如果您無法從用戶端電腦流覽到 URL，您應該測試從用戶端到執行 IIS 的伺服器的基本網路連接。 請參閱上一節中的點 1、2、3 和 4。
 
-如果您可以成功流覽兩個服務 Url，且用戶端與執行中的伺服器之間有連線，則表示 IIS 正在運作。 不過，在執行 IIS 和資料庫伺服器的伺服器之間，可能會發生通訊問題。
+此外，檢閱系統管理與監控伺服器上應用程式記錄的任何錯誤。
 
-由於網路問題或資料庫連線字串設定不正確，因此 MBAM services 可能無法連線到資料庫伺服器。 在 [管理及監視伺服器] 上查看應用程式記錄。 您可能會看到來源 ASP.NET 2.0.50727.0 中的錯誤專案或警告，類似下列記錄專案：
+您可以在用戶端與伺服器之間進行並行網路追蹤，並檢閱追蹤，判斷用戶端代理程式與 IBMM 系統管理伺服器之間連接失敗的原因。
+
+> [!Note]
+> 如果您從用戶端電腦流覽到服務 URL，而且在 IBMM 系統管理事件記錄中出現連接錯誤專案，這可能是因為系統管理伺服器與資料庫伺服器之間的連接失敗。
+
+如果您能夠成功流覽到這兩個服務 URL，而且用戶端與執行中的伺服器之間有連接，IIS 就可以運作。 不過，執行 IIS 的伺服器與資料庫伺服器之間的通訊可能有問題。
+
+由於網路問題或不正確的資料庫連接字串設定，因此，IBMM 服務可能無法連接到資料庫伺服器。 檢閱系統管理與監控伺服器上的應用程式記錄。 您可能會在 2.0.50727.0 ASP.NET 2.0.50727.0 中看到類似下列記錄專案的錯誤專案或警告：
 
     Log Name:      Application
     Source:        ASP.NET 2.0.50727.0
@@ -490,57 +490,57 @@ mofcomp c:\Windows\System32\wbem\win32_encryptablevolume.mof
         Sql ErrorCode: 5
         Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
 
-#### 可能原因
+#### <a name="possible-causes"></a>可能的原因
 
-##### 原因1
+##### <a name="cause-1"></a>原因 1
 
-在安裝管理與監視伺服器元件期間，管理員可能指定了不正確資料庫實例名稱/資料庫名稱。
+系統管理員在安裝系統管理及監控伺服器元件期間，可能指定不正確資料庫實例名稱/資料庫名稱。
 
-您可以使用 IIS 管理主控台驗證並修正資料庫連接字串。 若要這樣做，請開啟 IIS 管理員，然後流覽至 Microsoft BitLocker 管理與監視。 針對左側所列的每個服務，請遵循下列步驟來變更資料庫連線字串：
+您可以使用 IIS 管理主控台驗證及修正資料庫連接字串。 若要這麼做，請開啟 IIS Manager，然後流覽至 Microsoft BitLocker 系統管理與監控。 針對左側所列的每個服務，請遵循下列步驟來變更資料庫連接字串：
 
-1. 在 [**功能] 視圖**中，按兩下 [**連接字串**]。
+1. 在 **功能視圖**中，按兩下 **連接字串**。
 
-2. 在 [**連接字串**] 頁面上，選取您要變更的連接字串。
+2. 在連接 **字串** 頁面上，選取您想要變更的連接字串。
 
-3. 在 [**動作**] 窗格中，選取 [**編輯**]。
+3. 在動作**窗格中****，選取**編輯 。
 
-4. 在 [**編輯連接字串**] 對話方塊中，變更您要變更的屬性，然後選取 **[確定]**。
+4. 在 [ **編輯連接字串** 」 對話方塊中，變更您想要變更的屬性，然後選取 [ **確定**。
 
-##### 原因2
+##### <a name="cause-2"></a>原因 2
 
-在防火牆中封鎖 SQL Server 埠。 確認 SQL Server 設定為要監聽的埠號碼，並確定該埠已在系統管理伺服器和資料庫伺服器之間的防火牆中開啟。
+SQL Server防火牆中封鎖的埠。 確認已SQL Server要聆聽的埠號碼，並確認系統管理伺服器與資料庫伺服器之間的防火牆中已開啟該埠。
 
-##### 原因3
+##### <a name="cause-3"></a>原因 3
 
-不正確的 SQL server TCP/IP 系結。 在資料庫伺服器上，確認 SQL Server Configuration Manager 中的 SQL TCP/IP 系結。 MBAM 需要啟用 TCP/IP 和具名管道通訊協定才能連線至資料庫。
+不正確的SQL TCP/IP 綁定。 在SQL伺服器中SQL Server 組態管理員 TCP/IP 綁定。 TCP/IP 和命名的管道通訊協定必須啟用，以連接到資料庫。
 
-##### 原因4
+##### <a name="cause-4"></a>原因 4
 
-NT Authority\Network 服務帳戶或 MBAM 管理伺服器的電腦帳戶不具備連線至 SQL 資料庫所需的許可權。
+NT Authority\Network Service 帳戶或 NTM 系統管理伺服器的電腦帳戶沒有連接到資料庫SQL許可權。
 
-在資料庫伺服器上安裝資料庫元件期間，安裝程式會建立兩個本機群組： MBAM 合規性審核資料庫存取和 MBAM 復原與硬體資料庫存取。
+在資料庫伺服器上安裝資料庫元件期間，安裝程式會建立兩個本地群組：一組是：IBMM 合規性稽核 DB Access 和 IBMM 修復與硬體 DB Access。
 
-NT Authority\Network 服務帳戶、MBAM 管理伺服器的電腦帳戶，以及安裝資料庫元件的使用者，都會自動新增到這些群組中。
+NT Authority\Network Service 帳戶、IBMM 系統管理伺服器的電腦帳戶，以及安裝資料庫元件的使用者，都會自動新增到這些群組中。
 
-在安裝期間，系統會將這些群組授與資料庫所需的許可權。 屬於這個群組的所有使用者，都會自動收到資料庫所需的許可權。
+這些群組在安裝期間會獲得資料庫上所需的許可權。 屬於此群組的所有使用者會自動收到資料庫上所需的許可權。
 
-由於下列一或多個條件屬實，所以 web 服務可能無法連線到資料庫伺服器：
+如果下列一或多個條件為 True，Web 服務可能無法連接到資料庫伺服器，因為許可權問題：
 
-* 前面提到的群組會從資料庫伺服器上的本機群組中移除。
+* 先前提及的群組會從資料庫伺服器上的本地群組中移除。
 
-* NT Authority\Network 服務帳戶和 MBAM 管理伺服器的電腦帳戶不是這些群組的成員。
+* NT Authority\Network Service 帳戶和 IBMM 系統管理伺服器的電腦帳戶不是這些群組的成員。
 
 * 這些群組沒有資料庫所需的許可權。
 
-如果上述任何情況屬實，您會注意到 MBAM 管理和監視伺服器上的應用程式記錄中的許可權相關錯誤。 在這種情況下，您應該手動新增 NT Authority\Network 服務帳戶和 MBAM 管理伺服器的電腦帳戶，並在使用 SQL Server Management Studio （.）的 SQL 資料庫伺服器上，授與伺服器範圍的公用角色 https://msdn.microsoft.com/library/aa337562.aspx) 。
+如果有任何先前的條件為 True，您就會注意到在 IBMM 系統管理與監控伺服器上應用程式記錄中與許可權相關的錯誤。 在這種情況下，您應該手動新增 NT Authority\Network Service 帳戶和 IBMM 系統管理伺服器的電腦帳戶，並授予他們在 SQL 資料庫伺服器上使用 SQL Server Management Studio (的全伺服器公用角色 https://msdn.microsoft.com/library/aa337562.aspx) 。
 
-#### 查看 web 服務記錄
+#### <a name="review-the-web-service-logs"></a>檢查 Web 服務記錄
 
-如果 MBAM 管理伺服器上的應用程式記錄中沒有記錄任何事件，現在就可以查看 MBAM 管理和監視伺服器上所託管之 MBAM web 服務的 web 服務記錄（svclog）。 您必須使用服務追蹤檢視器工具（SvcTraceViewer.exe） https://msdn.microsoft.com/library/ms732023.aspx 來查看記錄檔。
+如果 IBMM 系統管理伺服器上沒有記錄應用程式記錄中的事件，現在該是檢閱託管于 IBMM 系統管理與監控伺服器的網服務記錄 (.svclog) 的時間。 您必須使用服務追蹤檢視器工具 (SvcTraceViewer.exe) https://msdn.microsoft.com/library/ms732023.aspx 檢視記錄檔案。
 
-您應該主要調查 RecoveryandHardwareService 和 ComplianceStatusService 的服務追蹤記錄。 根據預設，web 服務記錄位於 [C:\inetpub\Microsoft BitLocker 管理 Solution\Logs] 資料夾中。 在這裡，每個服務都會在自己的資料夾下寫入其 svclog 檔案。
+您應該主要調查 Recovery andWarewareService 和 ComplianceStatusService 的服務追蹤記錄。 根據預設，Web 服務記錄會位於 C：\inetpub\Microsoft BitLocker Management Solution\Logs 資料夾中。 在那裡，每個服務會在其自己的資料夾下寫入其 .svclog 檔案。
 
-在服務追蹤記錄中，查看任何錯誤或警告專案的活動。 根據預設，錯誤專案會以紅色醒目提示。 選取 [追蹤檢視器] 右窗格中的 [錯誤描述]，以查看錯誤專案的詳細資訊。 以下是追蹤記錄中的範例錯誤專案：
+檢查服務追蹤記錄中的活動是否有錯誤或警告專案。 根據預設，錯誤專案會以紅色顯示。 選取追蹤檢視器右窗格中的錯誤描述，以檢視錯誤專案的詳細資訊。 以下是追蹤記錄中的範例錯誤專案：
 
     <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
     <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
@@ -559,90 +559,90 @@ NT Authority\Network 服務帳戶、MBAM 管理伺服器的電腦帳戶，以及
     </ApplicationData>
     </E2ETraceEvent>
 
-## 重新安裝或重新配置 MBAM 基礎結構
+## <a name="re-installation-or-reconfiguration-of-mbam-infrastructure"></a>重新安裝或重新組建的
 
-若要重新安裝或重新設定 MBAM 基礎結構，您必須知道下列事項：
+若要重新安裝或重新重設<a0></a0>的<a1> </a1> <a2>：</a2><a3></a3><a4></a4><a5
 
-* 應用程式池帳戶
+* 應用程式庫帳戶
 
-* MBAM 群組（[技術支援]、[高級]、[報表使用者] 群組）
+* 支援人員、 (、進位、報表使用者群組群組) 
 
-* MBAM 報表 URL
+* 2010 年 12 月 15 日
 
-* SQL Server 名稱與資料庫名稱
+* SQL Server名稱和資料庫名稱
 
-* MBAM ReadWrite 與 ReadOnly 帳戶
+* 然後，請用同一個資料來閱讀
 
-### 應用程式池帳戶
+### <a name="application-pool-account"></a>應用程式庫帳戶
 
-若要尋找應用程式池帳戶，請登入 MBAM Web 服務器、開啟 [**網際網路資訊服務（IIS）管理員**]，然後選取 [**應用程式池**]：
+若要尋找應用程式庫帳戶，請登入的 IBMM Web Server，Internet Information Services (**IIS) Manager，** 然後選取應用程式**庫**：
 
-![應用程式池](images/troubleshooting-MBAM-installation-1.png)
+![應用程式庫。](images/troubleshooting-MBAM-installation-1.png)
 
-服務主體名稱（SPN）必須在這個帳戶中設定。 這個設定對 MBAM 的功能非常重要。
+必須在此帳戶中 (SPN) 服務主體名稱。 此設定對於<a0></a0>的<a1> </a1> <a2>，對於</a2> <a3></a3
 
-### MBAM 群組（[技術支援]、[高級]、[報表使用者] 群組和報表 URL）
+### <a name="mbam-groups-helpdesk-advanced-report-users-group-and-reports-url"></a>由 (支援人員、進 (、報表使用者群組和報表 URL 連結所組成) 
 
-![MBAM 群組](images/troubleshooting-MBAM-installation-2.png)
+![2010 年 12 月 15 日](images/troubleshooting-MBAM-installation-2.png)
 
-這會提供 [服務台] 群組、[高級支援人員] 群組、[報告使用者] 群組，以及 MBAM 報表 URL 等相關資訊。 MBAM 報表 URL 必須在 [MBAM 設定] 中提供，且應閱讀為： HTTP （s）：//servername/ReportServer。
+這提供如 Helpdesk 群組、進位服務台群組、報表使用者群組和 <B0 即為<a0></a0> URL 等資訊。 您必須在 HTTPM 設定中提供 HTTPM 報告 URL，並且應該會讀取為：HTTP () ：//servername/ReportServer。
 
-### SQL Server 名稱和資料庫（DB）名稱
+### <a name="sql-server-name-and-database-db-names"></a>SQL Server資料庫名稱 (資料庫) 名稱
 
-若要尋找託管 MBAM 的 SQL Server 名稱和實例，請登入 MBAM Web （IIS）伺服器，然後流覽至 folowing 登錄子機碼：
+若要尋找託管SQL SERVER MDB 的功能變數名稱和實例，請登入 ：IBMM Web (IIS) 伺服器，然後流覽至登錄子機機：
 
-**HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MBAM Server\Web**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MBAM Server\Web**
 
-![註冊表](images/troubleshooting-MBAM-installation-3.png)
+![Regedit。](images/troubleshooting-MBAM-installation-3.png)
 
-醒目提示的部分是連接字串。 這些應該有 SQL Server 名稱、資料庫名稱和實例（如果已命名的話）。
+強調的部分為連接字串。 這些名稱、資料庫SQL Server名稱，以及實例 (名稱) 。
 
-### MBAM ReadWrite 與 ReadOnly 帳戶
+### <a name="mbam-readwrite-and-readonly-accounts"></a>然後，請用同一個資料來閱讀和閱讀
 
-這項資訊將會在 SQL Server 資料庫中，我們已找到來自網頁伺服器的名稱。
+這項資訊會位於SQL Server資料庫中，我們已從 Web 服務器找到名稱。
 
-#### ReadWrite 帳戶
+#### <a name="readwrite-account"></a>ReadWrite 帳戶
 
-1. 登入 SQL Management Studio。
+1. 登入SQL Management Studio。
 
-2. 以滑鼠右鍵按一下 [ **MBAM 復原及硬體**]，選取 [**屬性**]，然後選取 [**許可權**]。
+2. 以滑鼠右鍵 **按一下 [管理與修復及硬體**>，選取 **[內容**，然後選取 **許可權**> 。
 
-例如，lab 帳戶名稱是**MBAMWrite**。 應用程式池和 ReadWrite 帳戶已設定為相同。
+例如，實驗室帳戶名稱為 **：。。** 應用程式庫和 ReadWrite 帳戶設定為相同。
 
-![SQL 資料庫](images/troubleshooting-MBAM-installation-4.png)
+![SQLDB。](images/troubleshooting-MBAM-installation-4.png)
 
-![DB 屬性](images/troubleshooting-MBAM-installation-5.png)
+![DB 屬性。](images/troubleshooting-MBAM-installation-5.png)
 
-流覽至 [**安全性**]，然後流覽至 SQL Management Studio 中的 [**登錄**]。 流覽至上一個螢幕擷取畫面中顯示的帳戶。
+流覽至**安全性****，然後在**SQL Management Studio。 流覽至上一個螢幕擷取畫面中顯示的帳戶。
 
-![SQL 安全性](images/troubleshooting-MBAM-installation-6.png)
+![SQL安全。](images/troubleshooting-MBAM-installation-6.png)
 
-以滑鼠右鍵按一下帳戶，移至 [**屬性使用者對應**]，然後找出 MBAM 復原與硬體資料庫：
+以滑鼠右鍵按一下帳戶，然後前往 **[屬性使用者映射**，並找出 [管理及修復及硬體資料庫：
 
-![使用者對應](images/troubleshooting-MBAM-installation-7.png)
+![使用者映射。](images/troubleshooting-MBAM-installation-7.png)
 
-#### 唯讀帳戶
+#### <a name="readonly-account"></a>ReadOnly 帳戶
 
-在 SSRS 伺服器上開啟 [SQL Server Reporting Services Configuration Manager]。 選取 [**報表管理員 URL**]，然後流覽**url**：
+開啟SQL Server Reporting Services SSRS Server 上的組組管理員。 選取**報表管理員 URL，** 然後流覽**URL：**
 
-![報表管理員](images/troubleshooting-MBAM-installation-8.png)
+![報表管理員。](images/troubleshooting-MBAM-installation-8.png)
 
-選取 [ **Microsoft Bitlocker 管理及監視**]：
+選取 **Microsoft Bitlocker 系統管理與監控**：
 
-![Bitlocker 管理和監視](images/troubleshooting-MBAM-installation-9.png)
+![Bitlocker 系統管理與監控。](images/troubleshooting-MBAM-installation-9.png)
 
-選取 [ **MaltaDatasource**]：
+選取 **MaltaDatasource**：
 
-![[](images/troubleshooting-MBAM-installation-10.png)
+![Dbs。](images/troubleshooting-MBAM-installation-10.png)
 
-![MaltaDatasource](images/troubleshooting-MBAM-installation-11.png)
+![MaltaDatasource。](images/troubleshooting-MBAM-installation-11.png)
 
-MaltaDataSource 應該具有唯讀帳戶名稱，且應該用於 MBAM 設定。
+MaltaDataSource 應具有 ReadOnly 帳戶名稱，且應該用於的  。
 
-## 參考
+## <a name="reference"></a>參考
 
 如需詳細資訊，請參閱下列文章：
 
-[在獨立配置中部署 MBAM 2。5](https://support.microsoft.com/help/3046555)
+[在獨立配置中部署 OFFICEM 2.5](https://support.microsoft.com/help/3046555)
 
 [Microsoft BitLocker Administration and Monitoring 2.5](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/)

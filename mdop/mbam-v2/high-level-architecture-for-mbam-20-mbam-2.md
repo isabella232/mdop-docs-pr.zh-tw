@@ -11,67 +11,68 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: ddc061a1aec5141548c2d2141be38f8501d2244d
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: f19480b5797362e6e4119fff9a14afd9d5a74d98
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10810713"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910498"
 ---
-# MBAM 2.0 的概要架構
+# <a name="high-level-architecture-for-mbam-20"></a>MBAM 2.0 的概要架構
 
 
-Microsoft BitLocker 管理和監控（MBAM）是一種用戶端/伺服器方案，可協助您簡化 BitLocker 的置備及部署、改善 BitLocker 的相容性與報告，並減少支援成本。 Microsoft BitLocker 管理和監控包括本主題中所述的功能。
+Microsoft BitLocker 系統管理與監控 () 是一種用戶端/伺服器解決方案，可協助簡化 BitLocker 的部署與部署、改善 BitLocker 的合規性與報告，並降低支援成本。 Microsoft BitLocker 系統管理與監控包含本主題所述的功能。
 
-Microsoft BitLocker 管理和監視可以在獨立拓撲中部署，或是在與 Microsoft System Center Configuration Manager 2007 或 MicrosoftSystemCenter2012 ConfigurationManager 整合的拓撲中部署。 本主題描述獨立拓朴的架構。 如需在整合式 Configuration Manager 拓撲結構中進行部署的相關資訊，請參閱[與 Configuration manager 一起使用 MBAM](using-mbam-with-configuration-manager.md)。
+Microsoft BitLocker 系統管理與監控可以部署在獨立拓撲中，或與 Microsoft System Center Configuration Manager 2007 或 Microsoft System Center 2012 Configuration Manager 整合的拓撲中。 本主題說明獨立拓撲的架構。 有關在整合式 Configuration Manager 拓撲中部署的資訊，請參閱在 [Configuration Manager](using-mbam-with-configuration-manager.md)中使用
 
-下圖顯示生產環境的 MBAM 建議架構，其中包含兩個伺服器與管理工作站。 這個架構最多可支援 200000 MBAM 用戶端。 體系結構中的伺服器功能和資料庫會在下一節中說明，並列在電腦或伺服器（我們建議您安裝它們）底下。
+下圖顯示由兩個伺服器和一個管理工作站所組成的生產環境的一個建議架構。 此架構最多支援 200，000 個的 200，000 個 。. 架構圖像中的伺服器功能和資料庫如下節所述，並列于建議您安裝之電腦或伺服器下。
 
-**記事** 單伺服器架構只能在測試環境中使用。
+**注意**  
+單一伺服器架構應僅適用于測試環境。
 
  
 
-![mbam 2 2-伺服器部署拓朴](images/mbam2-3-servers.gif)
+![ibmm 2 雙伺服器部署拓撲。](images/mbam2-3-servers.gif)
 
-## 管理和監控伺服器
-
-
-此伺服器上已安裝下列功能：
-
--   **管理和監控伺服器**。 系統會在 Windows Server 上安裝 [管理和監控伺服器] 功能，並包含 [管理與監控] 網站，其中包含報表與 [技術支援中心] 入口網站，以及監視 web 服務。
-
--   **自助入口網站**。 自助入口網站已安裝在 Windows 伺服器上。 自助式入口網站可讓用戶端電腦上的使用者能夠獨立地登入網站，讓他們可以取得修復金鑰來復原鎖定的 BitLocker 卷。
-
-## 資料庫伺服器
+## <a name="administration-and-monitoring-server"></a>系統管理與監控伺服器
 
 
 此伺服器上已安裝下列功能：
 
--   [**恢復資料庫**]。 已在 Windows server 和支援的 Microsoft SQLServer 實例上安裝復原資料庫。 此資料庫儲存從 MBAM 用戶端電腦收集的復原資料。
+-   **系統管理與監控伺服器**。 系統管理與監控伺服器功能會安裝在 Windows 伺服器上，並包含系統管理與監控網站，包括報告和技術支援中心入口網站，以及監控 Web 服務。
 
--   **合規性和審核資料庫**。 合規性與審計資料庫是安裝在 Windows server 和支援的 SQLServer 實例上。 此資料庫儲存 MBAM 用戶端電腦的合規性資料。 此資料主要用於 SQL Server Reporting Services （SSRS）主機的報表。
+-   **自助入口網站**。 Self-Service入口網站會安裝在Windows伺服器上。 Self-Service入口網站可讓用戶端電腦上的使用者獨立登入網站，以便取得復原金鑰以復原鎖定的 BitLocker 音量。
 
--   **合規性和審核報告**。 合規性和審核報告會安裝在 Windows server 上，以及已安裝 SQL Server Reporting Services （SSRS）功能的 SQLServer 實例支援。 這些報告提供 MBAM 報告，您可以從 [管理] 和 [監視] 網站或直接從 SSRS 伺服器存取。
-
-## 管理工作站
+## <a name="database-server"></a>資料庫伺服器
 
 
-下列功能已安裝在管理工作站（可以是 Windows server 或用戶端電腦）上。
+此伺服器上已安裝下列功能：
 
--   **原則範本**。 原則範本是由定義 BitLocker 磁片磁碟機加密之 MBAM 實現設定的群組原則設定所組成。 您可以在任何伺服器或工作站上安裝此原則範本，但通常會將它安裝在管理工作站上（這是受支援的 Windows server 或用戶端電腦）。 工作站不一定是專用電腦。
+-   **復原資料庫**。 修復資料庫會安裝在Windows伺服器和支援的 Microsoft SQL Server。 此資料庫會儲存從 SQLM 用戶端電腦收集的修復資料。
 
-## <a href="" id="---------mbam-client"></a> MBAM 用戶端
+-   **合規性和稽核資料庫**。 合規性和稽核資料庫會安裝在Windows伺服器和支援的 SQL Server。 此資料庫會儲存適用于 SQLM 用戶端電腦的合規性資料。 此資料主要用於 SSRS SQL Server Reporting Services (主機) 報表。
+
+-   **合規性和稽核報告**。 合規性和稽核報告會安裝在Windows伺服器上，以及已安裝 SSRS SQL Server SSRS SQL Server Reporting Services (支援的) 實例。 這些報告提供您可從系統管理與監控網站或直接從 SSRS 伺服器存取的 IBMM 報告。
+
+## <a name="management-workstation"></a>管理工作站
 
 
-MBAM 用戶端已安裝在 Windows 電腦上，且具有下列特性：
+下列功能已安裝在管理工作站上，可以是Windows伺服器或用戶端電腦。
 
--   使用群組原則，強制企業中用戶端電腦的 BitLocker 磁碟機加密。
+-   **策略範本**。 策略範本包含群組原則設定，可定義 BitLocker 磁片磁碟機加密的 B00 B0 B0 1000 -20100 -19993-19993-19993-20133- 您可以在任何伺服器或工作站上安裝策略範本，但通常安裝在管理工作站上，而管理工作站是伺服器或用戶端電腦Windows支援。 工作站不需要是專用電腦。
 
--   收集三個 BitLocker 資料磁片磁碟機類型的復原金鑰：操作系統磁碟機、固定資料磁碟機，以及可移動資料（USB）硬碟。
+## <a name="mbam-client"></a><a href="" id="---------mbam-client"></a> 國際管理管理組織用戶端
 
--   收集電腦的規範資料，並將資料傳遞到報告系統。
 
-## 相關主題
+在電腦上安裝了WINDOWS，具有下列特性：
+
+-   使用群組原則來強制執行企業用戶端電腦的 BitLocker 磁片磁碟機加密。
+
+-   收集三種 BitLocker 資料磁碟機類型的修復金鑰：作業系統磁片磁碟機、固定資料磁碟機，以及 USB 磁片磁碟機 (移除) 資料。
+
+-   收集電腦的合規性資料，並將資料傳遞至報告系統。
+
+## <a name="related-topics"></a>相關主題
 
 
 [開始使用 MBAM 2.0](getting-started-with-mbam-20-mbam-2.md)

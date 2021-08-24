@@ -11,54 +11,55 @@ ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 08/30/2016
-ms.openlocfilehash: fcb04e651341fa107c358eaabbd7992d7ea155ec
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 7415cf7a97edc646653df552723667bac8d25fdc
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10800988"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910688"
 ---
-# 適用於周邊網路的網際網路對向伺服器案例
+# <a name="internet-facing-server-scenarios-for-perimeter-networks"></a>適用於周邊網路的網際網路對向伺服器案例
 
 
-App-v 4.5 支援網際網路伺服器案例，在這種情況下，未連接至公司網路的使用者或從網路中斷連線的使用者仍然可以使用 App-v。 如下圖所示，只支援在網際網路（RTSPS 及 HTTPS）上使用安全通訊協定。
+App-V 4.5 支援網際網路伺服器案例，其中未連接到公司網路或中斷網路連接的使用者仍可使用 App-V。 如下圖所示，僅支援在網際網路上使用安全通訊協定 (RTSPS 和 HTTPS) 使用。
 
-![app-v 防火牆定點陣圖表](images/appvfirewalls.gif)
+![App-v 防火牆位置圖表。](images/appvfirewalls.gif)
 
-您可以使用 ISA 伺服器（在內部網路上有下列幾種方式）來設定網際網路程式解決方案：
+您可以使用 ISA Server 設定網際網路解決方案，其中 App-V 基礎結構位於內部網路上，方法如下：
 
--   為裝載 .ICO 和 OSD 檔案的 IIS 伺服器建立 Web 發佈規則，也可以選擇在內部網路上的 [資料流程套件]。 這裡提供詳細步驟 <https://go.microsoft.com/fwlink/?LinkId=151982> 。
+-   為內部網路上託管 ICO 和 OSD 檔案的 IIS 伺服器建立 Web 發佈規則 ，並選擇性地建立串流套件。 詳細步驟會提供于 <https://go.microsoft.com/fwlink/?LinkId=151982> 。
 
--   為 App-V Web 管理伺服器（RTSPS）建立伺服器發佈規則。 這裡提供詳細步驟 [https://go.microsoft.com/fwlink/?LinkId=151983&](https://go.microsoft.com/fwlink/?LinkId=151983) 。
+-   為 RTSPS 中的 App-V Web 管理伺服器建立伺服器發佈 (規則) 。 詳細步驟會提供于 [https://go.microsoft.com/fwlink/?LinkId=151983&](https://go.microsoft.com/fwlink/?LinkId=151983) 。
 
-如下圖所示，如果基礎結構在用戶端與 ISA 伺服器之間或 ISA 伺服器與內部網路之間已實施其他防火牆，則必須建立 RTSPS （TCP 322）與 HTTPS （TCP 443）防火牆規則，才能支援流量流程。 此外，如果在 ISA 伺服器與內部網路之間已實施防火牆，則必須允許網域成員所需的預設流量透過防火牆（DNS、LDAP、Kerberos、SMB/CIFS）進行隧道。
+如下圖所示，如果基礎結構在用戶端與 ISA Server 之間或 ISA Server 與內部網路之間已實施其他防火牆，則必須建立 RTSPS (TCP 322) 和 HTTPS (TCP 443) 防火牆規則，以支援流量。 此外，如果 ISA Server 與內部網路之間已建立防火牆，網域成員所需的預設流量必須允許透過防火牆 (DNS、LDAP、Kerberos、SMB/CIFS) 。
 
-![app-v 周邊網路防火牆圖表](images/appvperimeternetworkfirewall.gif)
+![App-v 周邊網路防火牆圖表。](images/appvperimeternetworkfirewall.gif)
 
-由於防火牆解決方案與環境有所不同，本主題中所提供的指導方針說明在周邊網路中設定面向網際網路的 App-v 環境所需的流量。 此資訊也包括建議的內部網路伺服器。
+由於防火牆解決方案因環境而異，本主題所提供的指南說明在周邊網路中設定網際網路型 App-V 環境所需的流量。 此資訊也包含建議的內部網路伺服器。
 
-將下列伺服器放在周邊網路：
+將下列伺服器放在周邊網路中：
 
--   App-v 管理伺服器
+-   App-V 管理伺服器
 
--   用於發佈及流式處理的 IIS 伺服器
+-   IIS 伺服器，用於發佈和串流
 
-**記事** 最佳做法是將管理伺服器與 IIS 伺服器放在不同的電腦上。
+**注意**  
+將管理伺服器和 IIS 伺服器放在不同的電腦上是最佳做法。
 
  
 
-將下列伺服器放在內部網路：
+將下列伺服器放在內部網路中：
 
 -   內容伺服器
 
--   資料存放區（SQL Server）
+-   資料儲存 (SQL Server) 
 
--   Active Directory 網網域控制站
+-   Active Directory 網域控制站
 
-## 流量需求
+## <a name="traffic-requirements"></a>流量需求
 
 
-下表列出從網際網路與周邊網路，以及從周邊網路到內部網路的通訊需求。
+下表列出網際網路和周邊網路，以及從周邊網路到內部網路之間通訊的流量需求。
 
 <table>
 <colgroup>
@@ -73,12 +74,12 @@ App-v 4.5 支援網際網路伺服器案例，在這種情況下，未連接至�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>RTSPS （發佈更新及流式處理套件）</p></td>
-<td align="left"><p>預設為 TCP 322;此功能可以在 App-v Management Server 中變更。</p></td>
+<td align="left"><p>RTSPS (發佈重新版和串流套件) </p></td>
+<td align="left"><p>TCP 322 預設為這可以在 App-V 管理伺服器中變更。</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>HTTPS （發佈 .ICO 和 OSD 檔案及流式套件）</p></td>
-<td align="left"><p>預設為 TCP 443;這可以在 IIS 設定中變更。</p></td>
+<td align="left"><p>HTTPS (發佈 ICO 和 OSD 檔案，以及串流套件) </p></td>
+<td align="left"><p>TCP 443 預設為這項功能可在 IIS 組配置中變更。</p></td>
 </tr>
 </tbody>
 </table>
@@ -99,23 +100,23 @@ App-v 4.5 支援網際網路伺服器案例，在這種情況下，未連接至�
 <tbody>
 <tr class="odd">
 <td align="left"><p>SQL Server</p></td>
-<td align="left"><p>TCP 1433 是預設值，但可以在 SQL Server 中設定。</p></td>
+<td align="left"><p>TCP 1433 為預設值，但可以在 SQL Server。</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>SMB/CIFS</p></td>
-<td align="left"><p>如果內容目錄是從管理伺服器或 IIS 伺服器的遠端位置（建議使用）。</p></td>
+<td align="left"><p>如果內容目錄位於管理伺服器或 IIS (遠端) 建議 (建議) 。</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Kerberos</p></td>
 <td align="left"><p>TCP 和 UDP 88</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>適用</p></td>
+<td align="left"><p>LDAP</p></td>
 <td align="left"><p>TCP 和 UDP 389</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>DNS</p></td>
-<td align="left"><p>內部資源的名稱解析（在週邊網路伺服器上使用主機的檔案可以消除）</p></td>
+<td align="left"><p>針對內部資源的名稱解析 (在周邊網路伺服器上使用主機的檔案，就可以) </p></td>
 </tr>
 </tbody>
 </table>

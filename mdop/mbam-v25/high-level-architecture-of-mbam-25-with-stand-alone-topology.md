@@ -11,28 +11,29 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 08/30/2016
-ms.openlocfilehash: 75e878e24b4675f2f2f574791d0f06ecadd0196d
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 9ec9b1e4391fde3083564f34b5f89d1c5bd174f7
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10811828"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910668"
 ---
-# MBAM 2.5 搭配獨立拓撲的概要架構
+# <a name="high-level-architecture-of-mbam-25-with-stand-alone-topology"></a>MBAM 2.5 搭配獨立拓撲的概要架構
 
 
-本主題描述使用 Configuration Manager 獨立拓朴部署 Microsoft BitLocker 管理和監控（MBAM）的建議架構。 在這個拓朴中，MBAM 是作為獨立產品進行部署。 您也可以使用 Configuration Manager 整合拓朴來部署 MBAM，並將 MBAM 與 Configuration Manager 整合在一起。 如需詳細資訊，請參閱[含 Configuration Manager 整合拓朴的 MBAM 2.5 高層架構](high-level-architecture-of-mbam-25-with-configuration-manager-integration-topology.md)。
+本主題說明使用 Configuration Manager 獨立拓撲 (部署 MICROSOFT BitLocker 系統管理與監控) 的架構。 在此拓撲中，將部署為獨立產品。 您也可以使用 Configuration Manager 整合拓撲來部署該拓撲，以將該拓撲與 Configuration Manager 整合。 有關詳細資訊，請參閱使用 Configuration Manager 整合拓撲的[2.5 高層級架構。](high-level-architecture-of-mbam-25-with-configuration-manager-integration-topology.md)
 
-如需本主題中所述軟體支援版本的清單，請參閱[MBAM 2.5 支援](mbam-25-supported-configurations.md)的設定。
+有關本主題中提及的軟體支援版本清單，請參閱[適用于支援的組配置。](mbam-25-supported-configurations.md)
 
-**記事** 我們建議您只在測試環境中使用單一伺服器結構。
+**注意**  
+我們建議您只在測試環境中使用單一伺服器架構。
 
  
 
-## 建議的伺服器數和支援的用戶端數量
+## <a name="recommended-number-of-servers-and-supported-number-of-clients"></a>建議的伺服器數量和支援的用戶端數目
 
 
-在生產環境中，建議的伺服器數量及支援的用戶端數量如下：
+在生產環境中，建議的伺服器數目和支援的用戶端數目如下：
 
 <table>
 <colgroup>
@@ -47,99 +48,100 @@ ms.locfileid: "10811828"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>伺服器和其他電腦的數目</p></td>
+<td align="left"><p>伺服器和其他電腦數目</p></td>
 <td align="left"><p>兩個伺服器</p>
 <p>一個工作站</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>支援的用戶端電腦數目</p></td>
-<td align="left"><p>500000</p></td>
+<td align="left"><p>500,000</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## 使用獨立拓朴的建議 MBAM 高層次架構
+## <a name="recommended-mbam-high-level-architecture-with-the-stand-alone-topology"></a>建議的具有獨立拓撲的高層級架構
 
 
-下列圖表和表格描述了建議的高層次、雙伺服器架構，以供獨立拓朴 MBAM 使用。 MBAM 多林部署需要單向或雙向信任。 單向信任要求伺服器網域信任用戶端網域。
+下列圖表和表格說明建議使用獨立拓撲的適用于 IBMM 的高層、雙伺服器架構。 需要單向或雙向信任的跨林部署。 單向信任要求伺服器網域信任用戶端網域。
 
-![mbam2](images/mbam2-5-2servers.png)
+![這是一個。](images/mbam2-5-2servers.png)
 
-在此伺服器上設定的伺服器功能說明資料庫伺服器
+在此伺服器上設定的伺服器功能描述資料庫伺服器
 
-合規性和審核資料庫
+合規性與稽核資料庫
 
-此功能已在執行 Windows Server 和支援的 SQL Server 實例的伺服器上設定。
+這項功能是在伺服器伺服器執行Windows，且支援SQL Server實例。
 
-**合規性和審核資料庫**會儲存規範資料，主要用於 SQL Server Reporting Services 主機的報表。
+合規性**和稽核資料庫**會儲存合規性資料，這些資料主要用於SQL Server Reporting Services報表。
 
-復原資料庫
+修復資料庫
 
-此功能已在執行 Windows Server 和支援的 SQL Server 實例的伺服器上設定。
+這項功能是在伺服器伺服器執行Windows，且支援SQL Server實例。
 
-復原**資料庫**會儲存從 MBAM 用戶端電腦收集的復原資料。
+修復 **資料庫** 會儲存從 SQLM 用戶端電腦收集的修復資料。
 
 報告
 
-此功能已在執行 Windows Server 和支援的 SQL Server 實例的伺服器上設定。
+這項功能是在伺服器伺服器執行Windows，且支援SQL Server實例。
 
-**報告**會提供企業中用戶端電腦的復原審核及合規性狀態資料。 您可以從 [管理] 和 [監視] 網站或直接從 SQL Server Reporting Services 存取報表。
+報告 **會** 提供企業用戶端電腦的修復稽核和合規性狀態資料。 您可以直接從系統管理與監控網站存取SQL Server Reporting Services。
 
-管理和監控伺服器
+系統管理與監控伺服器
 
-管理和監控網站
+系統管理與監控網站
 
-此功能是在執行 Windows Server 的電腦上設定。
+此功能是在執行伺服器的電腦上Windows。
 
-**管理和監控網站**是用來：
+系統 **管理與監控網站** 用於：
 
--   當使用者鎖定時，協助使用者重新取得電腦存取權。（此網站區域通常稱為 [技術支援中心]。）
+-   協助使用者在鎖定時重新取得電腦存取權。 (網站的這個區域通常稱為技術支援中心。) 
 
--   查看顯示用戶端電腦合規性狀態與復原活動的報告。
+-   查看顯示用戶端電腦合規性狀態及修復活動的報告。
 
-自助服務入口網站
+Self-Service入口網站
 
-此功能是在執行 Windows Server 的電腦上設定。
+此功能是在執行伺服器的電腦上Windows。
 
-**自助式入口**網站是一種網站，可讓用戶端電腦上的使用者能夠獨立登入網站，以取得復原金鑰（如果他們遺失或忘記其 BitLocker 密碼）。
+**自助入口**網站是一個網站，可讓用戶端電腦上的使用者獨立登入網站，以在使用者失去或忘記 BitLocker 密碼時取得修復金鑰。
 
-監視此網站的 web 服務
+監控此網站的 Web 服務
 
-此功能是在執行 Windows Server 的電腦上設定。
+此功能是在執行伺服器的電腦上Windows。
 
-MBAM 用戶端和網站會使用**監視 web 服務**來與資料庫進行通訊。
+**監控 Web 服務**會由管理管理中心用戶端和網站用來與資料庫通訊。
 
-**重要** 在 Microsoft BitLocker 管理和監控（MBAM） 2.5 SP1 中不再提供監視 Web 服務，因為 MBAM 網站會直接與恢復資料庫通訊。
+**重要**  
+Microsoft BitLocker 系統管理與監控 () 2.5 SP1 中不再提供監控 Web 服務，因為 MICROSOFT BITLocker 網站會直接與修復資料庫通訊。
 
  
 
 管理工作站
 
-MBAM 群組原則範本
+管理與管理管理小群組原則範本
 
--   MBAM 群組原則範本是定義 MBAM 之實現設定的群組原則設定，可讓您管理 BitLocker 磁碟機加密。
+-   此為群組原則設定，可定義用於管理 BitLocker 磁片磁碟機加密的實現設定。
 
--   在執行 MBAM 之前，您必須從[如何取得 MDOP 組原則（admx）範本](https://go.microsoft.com/fwlink/p/?LinkId=393941)下載群組原則範本，並將其複製到執行支援的 Windows Server 或 Windows 作業系統的伺服器或工作站。
+-   執行 IBMM 之前，您必須從如何取得 MDOP 群組原則[ (.admx) 範本](https://go.microsoft.com/fwlink/p/?LinkId=393941)下載群組原則範本，然後複製到執行支援的 Windows Server 或 Windows 作業系統的伺服器或工作站。
 
--   工作站不一定是專用電腦。
+-   工作站不需要是專用電腦。
 
-MBAM 用戶端與 Configuration Manager 用戶端電腦
+電腦與 CONFIGURATION Manager 用戶端電腦
 
-MBAM 用戶端軟體
+管理與管理管理用戶端軟體
 
-MBAM 用戶端：
+該客戶：
 
--   使用群組原則物件，在企業中的用戶端電腦上強制執行 BitLocker 磁碟機加密。
+-   使用群組原則物件在企業用戶端電腦上強制執行 BitLocker 磁片磁碟機加密。
 
--   收集三種資料磁片磁碟機類型的 Bitlocker 復原金鑰：操作系統磁碟機、固定資料磁碟機，以及可移動（USB）資料磁碟機。
+-   收集三種資料磁碟機類型的 Bitlocker 修復金鑰：作業系統磁片磁碟機、固定資料磁碟機，以及可移除的 USB (資料) 磁片磁碟機。
 
--   收集用戶端電腦的恢復資訊和電腦資訊。
+-   收集用戶端電腦的修復資訊和電腦資訊。
 
 
 
-## 相關主題
+## <a name="related-topics"></a>相關主題
 
 
 [開始使用 MBAM 2.5](getting-started-with-mbam-25.md)
@@ -150,9 +152,9 @@ MBAM 用戶端：
 
  
 
-## 取得 MBAM 的建議嗎？
-- 在[此](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)新增或投票建議。 
-- 如需 MBAM 問題，請使用[MBAM TechNet 論壇](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。 
+## <a name="got-a-suggestion-for-mbam"></a>有關于 MM 的建議嗎？
+- 在這裡新增或投票支援 [建議](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)。 
+- 針對針對的 MM 問題，請使用[的是 ：。。](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam) 
 
 
 
